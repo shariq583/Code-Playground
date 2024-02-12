@@ -1,0 +1,28 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.navbar
+{
+    background-color: rgb(203, 148, 255);
+    
+}
+.navbar ul li
+{
+    list-style: none;
+    display: inline-block;
+}
+.container
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    text-align: right;
+}
+.box
+{
+    background-color: aquamarine;
+    width: 45vw;
+    border: 2px solid red;
+}

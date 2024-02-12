@@ -1,0 +1,47 @@
+*{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: auto;
+}
+body 
+{
+    background-color: rgb(237, 218, 255);
+    background-blend-mode: color;
+}
+
+
+
+.name {
+    color: blueviolet;
+    
+}
+hr{
+    color: blueviolet;
+}
+
+.head
+{
+    color: rgb(139, 34, 237);
+}
+#classes
+{
+    bottom: 10px;
+}
+.img{
+    border: 1px solid darkorchid;
+}
+.hea 
+{
+    color: blueviolet;
+}
+.vid 
+{
+    align-items: center;
+}
+.mvid 
+{
+    border: 2px solid blueviolet;
+}
+#reason{
+    text-align: center;
+}

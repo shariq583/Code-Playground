@@ -1,0 +1,93 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.MContainer
+{
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    align-items: center;
+}
+.side1
+{
+    width:200px;
+    height:200px;
+    background-color: aqua;
+    border: 1px solid black;
+    transform: skewY(13deg);
+    rotate: y 297deg;
+}
+.side2
+{
+    z-index: 2;
+    width:200px;
+    height:200px;
+    background-color: aqua;
+    border: 1px solid black;
+    translate:6% 10.5%;
+    /* rotate: y 25deg; */
+    margin-left: -7vw;
+}
+.side3
+{
+    margin-left: -13vw;
+width:200px;
+height:200px;
+background-color: aqua;
+border: 1px solid black;
+transform: skewY(10deg);
+rotate: y 297deg ;
+}
+.side4
+{border: 1px solid black;
+width:200px;
+height:200px;
+background-color: aqua;
+    transform: skewY(0deg);
+    rotate: y 10deg;
+    rotate: x 73deg;
+    translate: -25vw -19vh;
+}
+.side5
+{
+width:200px;
+height:200px;
+background-color: aqua;
+
+}
+.side6
+{
+    width:200px;
+    height:200px;
+    background-color: aqua;
+    
+}
+.Pbar 
+{
+    background-color: red;
+    height: 2px;
+    animation: loading 1s ease-in-out 1;
+}
+@keyframes loading {
+    0%
+    {
+        width: 0vw;
+    }
+    50%
+    {
+        width: 40vw;
+    }
+    100%
+    {
+        width: 100vw;
+    }
+    101%
+    {
+        width: 0vw;
+
+    }
+}

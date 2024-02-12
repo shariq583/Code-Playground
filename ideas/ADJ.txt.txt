@@ -1,0 +1,25 @@
+This text file is made by Shariq Gazdar
+=======================================
+
+This file is made to remeber about a new project idea for a 
+Cpp program 
+
+The idea is to make a program that can make a adjoint of any given 
+matrix.
+
+Logics:
+
+
+
+
+
+Code Thing :
+
+
+
+
+
+
+
+
+

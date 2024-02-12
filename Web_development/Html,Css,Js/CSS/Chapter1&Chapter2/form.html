@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style_f.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form for the trip</title>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <h1>Fill Out these details to get registered for the picnic to Manali</h1>
+            
+        </div>
+        <hr class ="hr">
+    </header>
+    <main>
+        <div>
+            <form action="form.php">
+                Name:
+                <input class="name"type="text" placeholder="Enter your name"><br>
+                <hr>
+                Class:
+                <select name="Class" id="classes">
+                    <option value="default">Enter your Class</option>
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                    <option value="Class 4">Class 4</option>
+                    <option value="Class 5">Class 5</option>
+                    <option value="Class 6">Class 6</option>
+                    <option value="Class 7">Class 7</option>
+                    <option value="Class 8">Class 8</option>
+                    <option value="Class 9">Class 9</option>
+                    <option value="Class 10">Class 10</option>
+                </select><br><br>
+                <label for="sectionA">
+                    <input type="radio" value="section" id="sectionA">Section A
+
+                </label>
+                <label for="sectionB">
+                    <input type="radio" value="section" id="sectionB">Section B
+
+                </label>
+                <hr>
+                Reason :<br>
+                <textarea name="Reason" id="Resontxt" cols="30" rows="10"
+                    placeholder="Enter any reasons to come if you are an outsider " id="reason"></textarea><br>
+                <hr>
+                Contact :<br>
+                <input type="email" name="Email_user" id="Email" placeholder="Enter Your Email "><br>
+                <input type="tel" name="Phone_N" id="P_No" placeholder="Enter your phone number">
+                <br><hr>
+                Submit/Reset :<br>
+                <input type="button" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            <hr>
+        </div>
+        <div>
+            <p><b>
+                In case if you are wandering how manali looks like here a some glimpses of what you can see in the
+                trip
+                </b>
+            </p>
+                <img src="img/istockphoto-1495021904-170667a.webp" alt="Pic not avilable" width="250px" ><img
+                    src="img/istockphoto-1821721018-170667a.webp" alt="Pic not avilable" width="500px" class="img"><br><hr>
+            <b class="hea">Here is a vlog of trigger insan visiting manali :</b><br><br>
+            <div class="vid">
+
+                <iframe class="mvid" width="560" height="315" src="https://www.youtube.com/embed/oxVwELHM6go?si=ORTU8yXwG4_ht948" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            
+            <hr>
+        </div>
+
+    </main>
+</body>
+
+</html>

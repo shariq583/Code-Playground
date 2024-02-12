@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: 'Protest Revolution', sans-serif;
+}
+#navBar
+{
+    height: 3vw;
+    background-color: blue;
+    color: antiquewhite;
+    font-family: 'Protest Revolution', sans-serif;
+}
+.navHead
+{
+    text-align: center;
+}
+.Exptxt
+{
+    text-align:center;
+}
+
+#InpCont
+{
+    display: flex;
+    justify-content: center;
+}
+#InpBtn
+{
+    width: 5vw;
+    align-self: flex-end;
+}
+.Contxt
+{
+    display: inline-block;
+}
+#count
+{
+    display: inline-block;
+}

@@ -1,0 +1,11 @@
+the string in the file todolist is a sting array and to add multiple task to the to do list we must add a looped array
+so that there can be multiple task lines in the to do list but to remove the task we have to use the list methods in the 
+
+the todo list_exp structure :
+first input for choice 
+
+
+
+
+
+

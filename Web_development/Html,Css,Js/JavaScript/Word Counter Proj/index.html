@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Word Counter</title>
+</head>
+<body>
+    <nav id="navBar">
+        <h1 class="navHead">Word Counter</h1>
+    </nav>
+    <main>
+        <div id="Explain">
+            <h2 id="ExpHead">Word Counter</h2>
+            <p class="Exptxt">
+                Enter a text and the word count wil be on your screen
+            </p>
+        </div>
+        <h3 id="CountHead">Counter...</h3>
+        <div id="InpCont">
+            <textarea name="WordInp" id="InpTxt" cols="30" rows="10" placeholder="Enter Your Text Here..."></textarea>
+            <button onclick="AskInp()" id="InpBtn">Submit</button>
+        </div>
+        <div class="FinalCont">
+            <p class="Contxt">total words :</p>
+            <p id="count">0</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

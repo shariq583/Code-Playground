@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations And Transitons</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        .container
+        {
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+            width: 100vw;
+            background-color: yellowgreen;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .MainImg img
+        {
+
+            width: 10vw;
+            z-index: 2;
+            /* background: yellowgreen; */
+            mix-blend-mode:multiply;
+            animation: Ballani 5s ease infinite;
+        }
+        @keyframes Ballani {
+            0%
+            {
+                translate: 0px 90vh;
+            }
+            25%
+            {
+                translate: 20vw -50vh;
+            }
+            50%
+            {
+                translate: 40vw -110vh;
+            }
+            75%
+            {
+                translate: 60vw 50vh;
+            }
+            70%
+            {
+                /* translate: 0vw -10vh; */
+            }
+            100%
+            {
+                translate: 80vw 90vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Bounicng Ball animation -->
+    <div class="container">
+
+        <div class="MainImg">
+            <img src="img/images.jpeg" alt="Ball">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+.purple
+{
+    color: darkorchid;
+    background-color: rgb(106, 255, 181);
+}
+hr{
+    color: blueviolet;
+}
+.tab{ 
+    border: 10cap;
+    width: 250px;
+    background-color: rgb(179, 251, 251);
+    backface-visibility: hidden;
+    background-position: 100dvi;
+    
+}
+.list{
+    background-color: rgb(246, 198, 182);
+}
+ol{
+    background-color: rgb(246, 198, 182);
+
+}
+.link
+{
+    color:blueviolet;
+}
+body
+{
+    background-image: url('img/manali-5104279_640.jpg');
+    background-size: cover;
+}
