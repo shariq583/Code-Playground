@@ -58,16 +58,20 @@ public:
             return 0;
         }
     }
+    void UserCredDisplay()
+    {
+        cout<<"Your Acc. No. is "<<userAccNo<<endl;
+    }
 };
 class AdminDash {
     private:
         string intrRate = "4";
 
     protected:
-        string SavMon;
         string IntrMon;
 
     public:
+        string SavMon;
         void AInitMon(int tempMon) {
             SavMon = to_string(tempMon);
         }
@@ -80,21 +84,26 @@ class AdminDash {
 };
 
 class UserInfo : public AdminDash {
-    int dep;
+    
     public:
         void UInitMon (string funcMon)
         {
             SavMon = funcMon;
         }
+        void UserDisplay ()
+        {
+            std::cout << "The Money In Your Account is :" << SavMon << std::endl;
+        }
+
 };
 
 
 
+int Mchoice;
 
 int main() {
     // Variables and objects
     // Choice Vars
-    int Mchoice;
     int Uchoice;
     int Achoice;
     // User Cred Vars
@@ -103,10 +112,9 @@ int main() {
     string UPin_L;
     string UAccNo_L;
     cred Ucred;
-    UserInfo User ;
-    AdminDash Admin;
-    // User Info Vars
 
+    // User Info Vars
+    UserInfo User ;
 
     // Admin Cred Vars
     string APin_S;
@@ -115,25 +123,33 @@ int main() {
     string AAccNo_L;
     cred Acred;
 
+    // AdminDash Vars
+    AdminDash Admin;
+
 
     std::cout << "=========" << std::endl;
     std::cout << "Bank App" << std::endl;
     std::cout << "=========" << std::endl;
-
-    std::cout << "Who are you ?" << std::endl;
-    std::cout << "1.User..." << std::endl;
-    std::cout << "2.Admin..." << std::endl;
-    cin >> Mchoice;
-
+    MainLogin:
+    {
+        std::cout << "Who are you ?" << std::endl;
+        std::cout << "1.User..." << std::endl;
+        std::cout << "2.Admin..." << std::endl;
+        std::cout << "3.Exit...." << std::endl;
+        cin >> ::Mchoice;
+    }
+do
+{
+    
     switch (Mchoice) {
     case 1: // User Page
         std::cout << "1.Sign Up!" << std::endl;
         std::cout << "2.Log In!" << std::endl;
+        std::cout << "3.Back" << std::endl;
         cin >> Uchoice;
         switch (Uchoice) {
         case 1: // Sign Up
         {
-
             cout << "Enter A Account No.";
             cin >> UAccNo_S;
             Ucred.setUserAccNo(UAccNo_S);
@@ -155,19 +171,32 @@ int main() {
             cin >> UPin_L;
             tempPL = Ucred.UserCheckPin(UPin_L );
             if (tempPL == 1) {
-                // code to be put.
+                std::cout << "Autherized!!" << std::endl;
+                system("cls");
                 string tempSav;
-                std::cout << "How much money would you like to deposite ??" ;
-                cin>>tempSav;
-                User.UInitMon(tempSav);
+                if ((User.SavMon) <= "0" )
+                {
+                    
+                    std::cout << "How much money would you like to deposite ??" ;
+                    cin>>tempSav;
+                    User.UInitMon(tempSav);
+                }
+                
+                std::cout << "Your Account Details" << std::endl;
+                Ucred.UserCredDisplay();
+                User.UserDisplay();
             }
             else {
                 /* code */
                 cout<<"Unatherized!";
             }
+            goto MainLogin;
             break;
         }
-
+        case 3:
+        {
+            goto MainLogin;
+        }
         default: // UserChoice
             std::cout << "Wrong Choice!" << std::endl;
             break;
@@ -213,4 +242,5 @@ int main() {
 
 
 // Code will end here!
+} while(::Mchoice <= 2);
 }
