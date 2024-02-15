@@ -1,6 +1,6 @@
 #include <iostream>
+#include <string>
 using namespace std;
-class UserInfo;
 class AdminDash;
 class cred {
 protected:
@@ -42,36 +42,54 @@ public:
             return 0;
         }
     }
-};
-
-
-class AdminDash : public cred , public UserInfo{
-private:
-    string intrRate = "4";
-
-protected:
-    string SavMon;
-    string IntrMon;
-
-public:
-    void AInitMon(int tempMon) {
-        SavMon = to_string(tempMon);
+    int AdminCheckAccNo(string icheckNo) {
+        if (adminAccNo == icheckNo) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
     }
-    void AIntrMonSet() {
-        IntrMon = to_string(stoi(SavMon) + stoi(intrRate) / 100);
-    }
-    void AdDisplay(cred temp) {
-        std::cout << "The User A/c No. is:" << temp.userAccNo << std::endl;
+    int AdminCheckPin(string icheckPin ) {
+        if (adminPin == icheckPin ) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
     }
 };
+class AdminDash {
+    private:
+        string intrRate = "4";
 
-class UserInfo : public cred , public AdminDash{
+    protected:
+        string SavMon;
+        string IntrMon;
+
+    public:
+        void AInitMon(int tempMon) {
+            SavMon = to_string(tempMon);
+        }
+        void AIntrMonSet() {
+            IntrMon = to_string(stoi(SavMon) + stoi(intrRate) / 100);
+        }
+        void AdDisplay(cred temp) {
+            std::cout << "The User A/c No. is:" << temp.userAccNo << std::endl;
+        }
+};
+
+class UserInfo : public AdminDash {
+    int dep;
     public:
         void UInitMon (string funcMon)
         {
             SavMon = funcMon;
         }
 };
+
+
+
 
 int main() {
     // Variables and objects
@@ -150,7 +168,7 @@ int main() {
             break;
         }
 
-        default: // UChoice
+        default: // UserChoice
             std::cout << "Wrong Choice!" << std::endl;
             break;
         }
@@ -161,7 +179,7 @@ int main() {
         std::cout << "2.Log In!" << std::endl;
         cin >> Achoice;
         switch (Achoice) {
-        case 1: // Sign up!
+        case 1: // Sign up Admin!
             cout << "Enter A Account No.";
             cin >> AAccNo_S;
             Acred.setAdminAccNo(AAccNo_S);
@@ -170,7 +188,7 @@ int main() {
             Acred.setAdminPin(APin_S);
             break;
 
-        case 2: // Login
+        case 2: // Login Admin
         {
             int tempPLA, tempNLA;
             std::cout << "Enter Your account number" << std::endl;
@@ -188,8 +206,11 @@ int main() {
         }
         }
 
-    default: // Mchoice
+    default: // MasterChoice
         break;
     }
     }
+
+
+// Code will end here!
 }
