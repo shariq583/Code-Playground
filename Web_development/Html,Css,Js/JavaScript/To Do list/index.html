@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>ToDo's List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
       body
@@ -30,6 +30,7 @@
         width: 70vw;
         border-radius: 41vw;
       }
+    
     </style>
   </head>
   <body>
@@ -45,14 +46,17 @@
 
     <h1 class="text-center">List :</h1>
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Enter Task Here..." aria-label="Recipient's username" aria-describedby="button-addon2" id="Task">
-      <button class="btn btn-outline-secondary" type="button" id="button-addon2 " onclick="Addtask()">Add</button>
+      <input type="text" class="form-control" placeholder="Enter Task Here..." aria-label="Recipient's username" aria-describedby="button-addon2" id="Title">
+      <label for="Title">Title </label>
+     
     </div>
     
     <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-      <label for="floatingTextarea2">Description :</label>
+      <textarea class="form-control" placeholder="Leave a comment here" id="Description" style="height: 100px" ></textarea>
+      <label for="Description ">Description :</label>
+      <button type="button" class="btn btn-primary  mx-auto my-2" id="Taskbtn">Add To list</button>
     </div>
+
     <table class="table my-3 center table-bordered"></div>">
       <thead>
         <tr>
@@ -64,9 +68,8 @@
       <tbody>
         <tr>
           <th scope="row"id="S.No">1</th>
-          <td >Mark</td>
-          <td>Otto</td>
-          
+          <td >Coffe</td>
+          <td>Get Some Coffe</td>          
         </tr>
      
       </tbody>

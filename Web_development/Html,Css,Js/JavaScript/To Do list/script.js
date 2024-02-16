@@ -1,5 +1,8 @@
-let Task = document.getElementById('Task')
-let index = document.getElementById('S.No')
-function Addtask() {
-    localStorage.setItem(Task.value , index.innerText)
-}
+let taskbtn = document.getElementById('Taskbtn');
+taskbtn.addEventListener('click' , () =>{
+let title = document.getElementById('Title')
+let desc = document.getElementById('Description')
+let ListArr = [];
+localStorage.setItem()
+}); 
+
