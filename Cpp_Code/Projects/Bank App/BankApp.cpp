@@ -172,23 +172,23 @@ do
             tempPL = Ucred.UserCheckPin(UPin_L );
             if (tempPL == 1) {
                 std::cout << "Autherized!!" << std::endl;
-                system("cls");
                 string tempSav;
                 if ((User.SavMon) <= "0" )
                 {
-                    
+                    system("cls");                    
                     std::cout << "How much money would you like to deposite ??" ;
                     cin>>tempSav;
                     User.UInitMon(tempSav);
                 }
-                
-                std::cout << "Your Account Details" << std::endl;
+                std::cout << "Your Account Details :" << std::endl;
                 Ucred.UserCredDisplay();
-                User.UserDisplay();
+                User.UserDisplay();                
             }
             else {
                 /* code */
-                cout<<"Unatherized!";
+                cout<<"\nUnatherized!";
+                cout<<"\n============";
+                goto MainLogin;
             }
             goto MainLogin;
             break;
@@ -226,11 +226,16 @@ do
             std::cout << "Enter Your account Pin" << std::endl;
             cin >> APin_L;
             tempPLA = Acred.UserCheckPin(APin_L);
-            if (tempPLA == 0) {
-                // code to be put....
+            if (tempPLA == 1) 
+            {
+                std::cout << "Autherized As A adim!" << std::endl;
+                std::cout << "What Do You Want to Do?" << std::endl;
+                std::cout << "1.Change An Account's Deposit" << std::endl;
+                std::cout << "2.See An Account's Info" << std::endl;
+                std::cout << "3.Back To Main" << std::endl;
             }
             else {
-                // code to be put...
+                std::cout << "Unautherized!" << std::endl;
             }
         }
         }
