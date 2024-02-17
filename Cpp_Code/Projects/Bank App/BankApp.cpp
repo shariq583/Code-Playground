@@ -78,8 +78,9 @@ class AdminDash {
         void AIntrMonSet() {
             IntrMon = to_string(stoi(SavMon) + stoi(intrRate) / 100);
         }
-        void AdDisplay(cred temp) {
-            std::cout << "The User A/c No. is:" << temp.userAccNo << std::endl;
+        void AdMain ()
+        {
+            
         }
 };
 
@@ -228,14 +229,23 @@ do
             tempPLA = Acred.UserCheckPin(APin_L);
             if (tempPLA == 1) 
             {
+                int ASubChoice;
+                
                 std::cout << "Autherized As A adim!" << std::endl;
                 std::cout << "What Do You Want to Do?" << std::endl;
-                std::cout << "1.Change An Account's Deposit" << std::endl;
-                std::cout << "2.See An Account's Info" << std::endl;
-                std::cout << "3.Back To Main" << std::endl;
+                std::cout << "=======================" << std::endl;
+                std::cout << "1.Check/Change An Accountt Info" << std::endl;
+                std::cout << "2.Back To Main" << std::endl;
+                cin>>ASubChoice;
+                    if (ASubChoice == 1)
+                    {
+                        cout<<"\nEnter Account Number: ";
+                        
+                    }
             }
             else {
                 std::cout << "Unautherized!" << std::endl;
+                std::cout << "=============" << std::endl;
             }
         }
         }
