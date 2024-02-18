@@ -78,7 +78,7 @@ class AdminDash {
         void AIntrMonSet() {
             IntrMon = to_string(stoi(SavMon) + stoi(intrRate) / 100);
         }
-        void AdMain ()
+        void AdMain (  )
         {
             
         }
