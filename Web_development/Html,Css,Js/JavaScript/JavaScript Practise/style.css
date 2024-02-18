@@ -1,0 +1,16 @@
+.MContainerForm
+{
+    width: 90vw;
+    height: 25vw;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    margin: 0 auto;
+    border-radius: 2%;
+    padding: 2vw;
+    overflow: scroll;
+}
+.ContainerTable
+{
+    margin: 0 auto;
+    width: 90vw;
+}
