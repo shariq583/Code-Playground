@@ -1,0 +1,19 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .footer {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
