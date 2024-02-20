@@ -61,6 +61,7 @@
     width: 35vw;
     margin-left: 0.1vw;
     padding: 0vh 0.1vw;
+    height: auto;
 }
 .LeftWindow_Heding
 {
@@ -170,7 +171,6 @@
 /* footer */
 .footer
 {
-    margin-top: 100vh;
     border: 1px solid black;
     background-color: rgba(246, 240, 240, 0.571);
     text-align: center;
