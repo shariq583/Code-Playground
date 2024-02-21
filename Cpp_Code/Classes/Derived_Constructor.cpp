@@ -26,10 +26,14 @@ class derived : public Base
     {
         b=tempb;
     }
+    derived(int tempb ,int tempa ) :b(tempb) , Base(tempa) 
+    {
+        std::cout << "Constructor invoked!" << std::endl;
+    }
 };
 int main()
 {   
-    derived d(5);
+    derived d(5 , 6);
     std::cout << "The Value of a is :" 
     << d.a
     << std::endl;
