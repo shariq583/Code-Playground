@@ -31,8 +31,19 @@
     // let avg = totMarks/marks.length;
     // console.log(`The averrage of ${marks} is: ${avg}%`);
 // Qn 2 :
-    let price =[250,645,300,900,50];
-    for (const item of marks) {
-        price[item]=(item*(10/100));
-        console.log(price);
-    }
+    // let price =[250,645,300,900,50];
+        // let disArr = []
+        // for (let item of price) {
+        //     item=(item*(10/100));
+        //     disArr.push(item);
+        // }
+        // for (let index = 0; index < price.length; index++) {
+        //     price[index]=price[index]-disArr[index];        
+        // }
+        // console.log(price);
+// Array Methods Qno 1
+let techcomp=["Bloomberg" , "Microsoft" , "Uber" , "google" , "IBM" ,"Netflix"]
+techcomp.shift();
+techcomp.splice(2,1,"Ola");
+techcomp.push("amazon");
+console.log(techcomp);
