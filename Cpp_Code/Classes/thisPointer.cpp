@@ -19,4 +19,7 @@ int main()
     Base b;
     b.setData(3);
     b.getData();
+    std::cout << "Rayan is a donkey" << std::endl;
 }
+// bbn v'
+ 
