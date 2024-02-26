@@ -6,14 +6,14 @@
 }
 :root
 {
-    --theme: rgb(0, 30, 255);
-    --bg-theme: rgb(208, 212, 242) ;
+    --nav-theme: rgb(0, 30, 255);
+    --bg-theme: rgb(255, 255, 255) ;
 }
 .navbar
 {
     font-family: 'Poor Story', system-ui;
     list-style: none;    
-    background-color: var(--theme);
+    background-color: var(--nav-theme);
     min-height: 3vw;
     display: flex;
     justify-content: space-between;
@@ -51,8 +51,13 @@
 }
 .navbar ul li a 
 {
-    color: aliceblue;
+    color: rgb(220, 220, 254);
     text-decoration: dashed;
+}
+.navbar ul li :hover
+{
+    color: aliceblue;
+    font-size: large;
 }
 
 body
@@ -60,15 +65,26 @@ body
     background-color: var(--bg-theme);
 }
 .slider
-{
-    
-    display: flex;
+{    
     margin: 1vw auto 0vw auto;
-    box-shadow: 7px 5px 5px var(--theme) ;
+    border: 2px solid var(--nav-theme);
+    box-shadow: 2px 2px 2px  var(--nav-theme) ;
     /* border: 2px solid black; */
     height: 27vw;
     width: 90vw;    
-    animation: slide 10s ease-in-out  infinite alternate;
+    background-image :url(/Web_development/Html\,Css\,Js/CSS/Projects/Portfolio/Portfolio_Projects/img/Offers.bmp)
+    
+}
+#SliderImg
+{
+    height: 27vw;
+    width: 90vw;    
+}
+#scrollTxt
+{
+    
+    color: blue;
+    z-index: 3;
 }
 @keyframes slide {
     0%
@@ -131,5 +147,10 @@ body
 .card5
 {
     text-align: center;
+}
+#mainFooter
+{
+    background-color: var(--nav-theme);
+    color: white;
 }
 
