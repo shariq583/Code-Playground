@@ -14,3 +14,15 @@ btn.addEventListener("click",()=>{
         i.setAttribute("class","txtCntr")
     }
 })
+
+let pinfo = document.createElement("p");
+pinfo.innerText="The Quick Brown Fox Jumps Over The Lazy Dog!";
+btn.after(pinfo);
+let btnn = document.createElement("button");
+btnn.innerText="Click me BTN!";
+pinfo.after(btnn);
+btnn.style.backgroundColor="red";
+btnn.style.color="white";
+
+let Q2Para = document.querySelector(".Pclass")
+Q2Para.classList.add("txtCntr")
