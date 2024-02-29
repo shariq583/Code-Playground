@@ -1,0 +1,19 @@
+.num1 input
+{
+    margin-left: 10vw;
+    border-color: green;
+    color: rgb(0, 49, 0);
+}
+.num2 input
+{
+    margin-left: 10vw;
+    border-color: green;
+    color: rgb(0, 49, 0);
+}
+.opts select
+{
+    display: block;
+    margin: 1vw 10vw;
+    border-color: green;
+    color: rgb(0, 49, 0);
+}
