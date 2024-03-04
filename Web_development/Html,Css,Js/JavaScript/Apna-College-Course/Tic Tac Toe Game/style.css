@@ -33,4 +33,9 @@ body {
 .cell {
   height: 18vmin;
   margin: 1vw;
+  font-size: 3rem;
+  border-radius: 5%;
+  border: none;
+  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.713);
+  color: brown;
 }
