@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     string InpPass;
-    string Pass = "Insan253";
+    string Pass = "Shariq";
     ifstream filePassIn("rockyou.txt");
     while (filePassIn.eof()==0)
     {
@@ -12,6 +12,7 @@ int main()
         if (InpPass==Pass)
         {
             std::cout << "The Password is :" << InpPass<<std::endl;
+            filePassIn.close();
         }
         else if(InpPass!=Pass && filePassIn.eof()==0)
         {
