@@ -1,5 +1,8 @@
 let turnX = true;
 let gameBtns = document.querySelectorAll(".cell");
+let turnDisp = document.querySelector(".text");
+let winDisp = document.querySelector(".win");
+let resetBtn = document.querySelector("#resetBtn");
 let winPattern = [
   [0, 1, 2],
   [0, 3, 6],
@@ -10,17 +13,21 @@ let winPattern = [
   [6, 4, 2],
   [6, 7, 8],
 ];
+let evt;
 gameBtns.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnX == true) {
       box.innerText = "X";
       turnX = false;
+      turnDisp.innerText = "O's Turn";
     } else {
       box.innerText = "O";
       turnX = true;
+      turnDisp.innerText = "X's Turn";
     }
+    // trunCheck();
     box.disabled = true;
-    winCheck();
+    winCheck(evt);
   });
 });
 const winCheck = () => {
@@ -34,7 +41,16 @@ const winCheck = () => {
     let pos1Val = gameBtns[pattern[0]].innerText;
     let pos2Val = gameBtns[pattern[1]].innerText;
     let pos3Val = gameBtns[pattern[2]].innerText;
-    if (pos1Val != "" && pos2Val && pos3Val) {
+    if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
+      if (pos1Val == pos2Val && pos2Val == pos3Val) {
+        winDisp.innerText = `Winner is ${pos3Val}`;
+        for (const btn of gameBtns) {
+          btn.disabled = true;
+        }
+      }
     }
   }
 };
+resetBtn.addEventListener("click", () => {
+  location.reload();
+});

@@ -18,7 +18,7 @@ body {
   text-decoration: underline;
 }
 .container {
-  height: 70vw;
+  height: 40vw;
   width: 100vw;
 }
 .game {
@@ -39,4 +39,25 @@ body {
   box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.713);
   color: brown;
   background-color: var(--txt-color);
+}
+.text {
+  font-weight: bold;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#resetBtn {
+  height: 5vw;
+  width: 7vw;
+  background-color: white;
+  color: brown;
+  font-weight: bold;
+  border-radius: 8%;
+  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.713);
+  border: none;
+}
+.win {
+  font-size: larger;
 }
