@@ -1,12 +1,17 @@
 #include<iostream>
 using namespace std;
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wsign-compare"
+// Your code with the comparison that triggers the warning
+#pragma GCC diagnostic pop
+
 template <class T>
 class vector {
 public:
     int size = 3;
     T *vecArr; // Pointer to int array
 
-    vector(float i, float j, float k) {
+    vector(T i, T j, T k) {
         vecArr = new T[size]; // Allocate memory for the pointer
         vecArr[0] = i;
         vecArr[1] = j;
@@ -25,7 +30,7 @@ public:
 int main() {
     vector <float> v1(2.5, 3, 4);
     vector <float> v2(5, 6, 8);
-    int result = v1.dotProduct(v2);
+    float result = v1.dotProduct(v2);
     std::cout << "The Result is: " << result << std::endl;
     return 0;
 }
