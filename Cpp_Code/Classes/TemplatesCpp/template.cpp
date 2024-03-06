@@ -1,7 +1,6 @@
 #include<iostream>
 using namespace std;
 #pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wsign-compare"
 // Your code with the comparison that triggers the warning
 #pragma GCC diagnostic pop
 
