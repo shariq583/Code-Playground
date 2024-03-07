@@ -216,6 +216,7 @@ int main() {
                     cout << "Set A Account Pin";
                     cin >> APin_S;
                     Acred.setAdminPin(APin_S);
+                    break;
                 }
             case 2: // Login Admin
                 {
@@ -236,27 +237,16 @@ int main() {
                         cin >> ASubChoice;
                         if (ASubChoice == 1) {
                             string tempInpCheck;
-                            char terChoice;
                             cout << "\nEnter Account Number: ";
                             cin >> tempInpCheck;
                             Admin.AsearchUser(tempInpCheck, ptrUcred, UserPtr);
-                            std::cout << "Want to continue the program Y/N?" << std::endl;
-                            cin>>terChoice;
-                                if (terChoice=='y'||terChoice=='Y')
-                                {
-                                        goto MainLogin;
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                                
-                                
+                            break;
                         }
                     }
                     else {
                         cout << "Unauthorized!" << endl;
                         cout << "=============" << endl;
+                        cout << tempPLA << endl;
                     }
                     break;
                 }
@@ -267,6 +257,9 @@ int main() {
                 cout << "Wrong Choice Exiting Program" << endl;
                 break;
             }
+            break;
+        default:
+            cout << "Wrong Choice Exiting Program" << endl;
             break;
         }
     } while (Mchoice > 2);
