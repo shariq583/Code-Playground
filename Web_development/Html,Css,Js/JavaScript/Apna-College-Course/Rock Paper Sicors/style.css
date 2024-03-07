@@ -49,9 +49,11 @@ img {
   gap: 2vw;
 }
 .yScore p {
+  font-size: x-large;
   text-align: center;
 }
 .cScore p {
+  font-size: x-large;
   text-align: center;
 }
 .dispMsg {
