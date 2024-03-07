@@ -4,11 +4,11 @@ using namespace std;
 class AdminDash;
 class cred {
 protected:
-    string userPin;
     string adminPin;
     string adminAccNo;
 
 public:
+    string userPin;
     string userAccNo;
     cred() {
         userPin = "0000";
@@ -63,7 +63,7 @@ public:
         cout<<"Your Acc. No. is "<<userAccNo<<endl;
     }
 };
-class AdminDash {
+class AdminDash  {
     private:
         string intrRate = "4";
 
@@ -78,13 +78,25 @@ class AdminDash {
         void AIntrMonSet() {
             IntrMon = to_string(stoi(SavMon) + stoi(intrRate) / 100);
         }
-        void AdMain (  )
-        {
+        void AsearchUser(string userInp , cred *tempInp, UserInfo *tempUser){
+            if((tempInp->userAccNo)==userInp)
+            {
+                AdMainDisp(tempInp,tempUser);
+            }
+            else
+            {
+                std::cout << "No Such Account No." << std::endl;
+            }
             
+        }
+        void AdMainDisp(cred* tempInp,UserInfo*tempUser){
+            std::cout << "The UserNo is :" <<tempInp->userAccNo<< std::endl;            
+            std::cout << "The Password is :" <<tempInp->userPin<< std::endl;  
+            std::cout << "The Cash In this account is :" <<tempUser->SavMon << std::endl;          
         }
 };
 
-class UserInfo : public AdminDash {
+class UserInfo  :public AdminDash{
     
     public:
         void UInitMon (string funcMon)
@@ -113,9 +125,11 @@ int main() {
     string UPin_L;
     string UAccNo_L;
     cred Ucred;
+    cred * ptrUcred=&Ucred;
 
     // User Info Vars
     UserInfo User ;
+    UserInfo * UserPtr = &User;
 
     // Admin Cred Vars
     string APin_S;
@@ -132,6 +146,7 @@ int main() {
     std::cout << "Bank App" << std::endl;
     std::cout << "=========" << std::endl;
     MainLogin:
+    // FIrst Choice User/Admin
     {
         std::cout << "Who are you ?" << std::endl;
         std::cout << "1.User..." << std::endl;
@@ -216,7 +231,7 @@ do
             cout << "Set A Account Pin";
             cin >> APin_S;
             Acred.setAdminPin(APin_S);
-            break;
+            
 
         case 2: // Login Admin
         {
@@ -226,11 +241,11 @@ do
             tempNLA = Acred.UserCheckAccNo(AAccNo_L);
             std::cout << "Enter Your account Pin" << std::endl;
             cin >> APin_L;
-            tempPLA = Acred.UserCheckPin(APin_L);
+            tempPLA = Acred.AdminCheckPin(APin_L);
             if (tempPLA == 1) 
             {
                 int ASubChoice;
-                
+
                 std::cout << "Autherized As A adim!" << std::endl;
                 std::cout << "What Do You Want to Do?" << std::endl;
                 std::cout << "=======================" << std::endl;
@@ -239,23 +254,25 @@ do
                 cin>>ASubChoice;
                     if (ASubChoice == 1)
                     {
+                        string tempInpCheck;
                         cout<<"\nEnter Account Number: ";
-                        
+                        cin>>tempInpCheck;
+                        Admin.AsearchUser(tempInpCheck,ptrUcred,UserPtr);
                     }
             }
             else {
                 std::cout << "Unautherized!" << std::endl;
                 std::cout << "=============" << std::endl;
+                std::cout << tempPLA<< std::endl;
             }
         }
+        break;
         }
-
     default: // MasterChoice
         break;
     }
     }
-
-
 // Code will end here!
-} while(::Mchoice <= 2);
+} 
+while(::Mchoice <= 2);
 }
