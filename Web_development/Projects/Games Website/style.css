@@ -21,3 +21,13 @@ body {
 #navSec {
   background-color: var(--se-color);
 }
+#TTT {
+  width: 40vw;
+  height: 40vw;
+}
+#TTT img {
+  width: 20vw;
+  height: 20vw;
+  object-fit: contain;
+  box-shadow: 3px 2px 8px black;
+}
