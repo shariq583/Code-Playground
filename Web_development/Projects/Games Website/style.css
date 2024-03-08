@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Pacifico&family=Protest+Revolution&display=swap");
+:root {
+  --bg-color: #17183b;
+  --se-color: #5c1767;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* background-color: var(--bg-color); */
+}
+body {
+  background-color: var(--bg-color);
+  text-align: center;
+  color: whitesmoke;
+  font-family: "Madimi One", sans-serif;
+}
+#navBar {
+  background-color: #7f177d;
+  box-shadow: 3px 2px 8px black;
+}
+#navSec {
+  background-color: var(--se-color);
+}
