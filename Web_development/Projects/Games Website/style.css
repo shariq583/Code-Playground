@@ -47,7 +47,7 @@ body {
 #RPS img {
   width: 20vw;
   height: 20vw;
-  object-fit: contain;
+  object-fit: cover;
   box-shadow: 3px 2px 8px black;
 }
 #RPS a {
