@@ -51,6 +51,7 @@ void main() {
         else
         {
             std::cout << "The word " << input <<" is not found in the file " <<std::endl;
+            
         }
     }
 
