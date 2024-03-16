@@ -32,16 +32,46 @@
 //     });
 //   });
 // });
-// Promises
+// Simple Async Validation Using Promises
 function giveName(name, getNxtName) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log(`The name is ${name}`);
-      resolve("Name Job Done!");
+      let arrayNames = ["Shariq", "Shayan", "Rayan"];
+      for (let index = 0; index < arrayNames.length; index++) {
+        const element = arrayNames[index];
+        if (element === name) {
+          console.log(`The name is ${name}`);
+          resolve("Name Job Done!");
+          break;
+        } else {
+          console.log(`The name is not ${name}`);
+          reject("Name Job Not Done!");
+        }
+      }
       if (getNxtName) {
         getNxtName();
       }
     }, 5000);
   });
 }
+// let dbResult = giveName("Shariq");
+// Promises
+// function giveName(name, getNxtName) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log(`The name is ${name}`);
+//       resolve("Name Job Done!");
+//       if (getNxtName) {
+//         getNxtName();
+//       }
+//     }, 5000);
+//   });
+// }
+
 let dbResult = giveName("Shariq");
+dbResult.then((res) => {
+  console.log(`Job Done with This result"${res}"`);
+});
+dbResult.catch((err) => {
+  console.log(`Job Failed With error "${err}"`);
+});
