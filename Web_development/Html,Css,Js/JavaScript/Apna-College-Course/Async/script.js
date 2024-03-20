@@ -75,4 +75,29 @@
 // dbResult.catch((err) => {
 //   console.log(`Job Failed With error "${err}"`);
 // });
-function asyncFunc() {}
+// function asyncFunc(data) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Some data:", data);
+//       resolve("Done with data 1");
+//     }, 4000);
+//   });
+// }
+// // Promise Chaining
+// asyncFunc("Shariq")
+//   .then(() => {
+//     return asyncFunc("Shayan");
+//   })
+//   .then(() => {
+//     console.log("success");
+//   });
+async function printVal(dataPrint) {
+  setTimeout(() => {
+    console.log(`The data is ${dataPrint}`);
+  }, 2000);
+}
+async function print2(nameData) {
+  await printVal("nameData");
+  await printVal("nameData");
+}
+print2("Run");
