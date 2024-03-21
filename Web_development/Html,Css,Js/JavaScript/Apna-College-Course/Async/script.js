@@ -91,13 +91,16 @@
 //   .then(() => {
 //     console.log("success");
 //   });
+// async-Await
 async function printVal(dataPrint) {
-  setTimeout(() => {
-    console.log(`The data is ${dataPrint}`);
-  }, 2000);
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("data Print Work...", dataPrint);
+      resolve(200);
+    }, 5000);
+  });
 }
-async function print2(nameData) {
-  await printVal("nameData");
-  await printVal("nameData");
-}
-print2("Run");
+(async function () {
+  await printVal("1");
+  await printVal("2");
+})();
