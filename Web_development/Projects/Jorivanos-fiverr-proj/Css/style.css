@@ -2,6 +2,52 @@
   margin: 0;
   padding: 0;
 }
-#navImg img {
+body {
+  font-family: Arial, sans-serif;
+}
+#navMain {
+  height: 6vw;
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  border: 1px solid black;
+}
+#logoImg {
   width: 5vw;
+  margin: 0 2vw;
+  object-fit: contain;
+}
+#searchContainer {
+  margin: 0 auto;
+}
+#searchField {
+  height: 2vw;
+  width: 25vw;
+  resize: none;
+  padding: 0.2vw 1vw;
+}
+#searchField::placeholder {
+  font-size: 14px;
+}
+#personImg {
+  width: 3vw;
+  margin: 0 2vw;
+  object-fit: contain;
+}
+#cartImg {
+  width: 5vw;
+  margin: 0 2vw;
+  object-fit: contain;
+}
+#navSec {
+  padding: 0.5vw 5vw;
+  border: 1px solid black;
+}
+#navSec a {
+  padding: 0.5vw 2vw;
+  text-decoration: none;
+  color: black;
+}
+#fCardHeading {
+  padding: 2vw 4vw;
 }
