@@ -48,7 +48,10 @@
     <main>
       <div id="leftSide">
         <h1 id="mainHeading">Resultaten</h1>
-        <div id="resultBox"></div>
+        <div id="resultBox">
+          <h2 id="resultBoxHeading">Bereidingstijd</h2>
+          <input type="range" min="0" max="100" step="50" value="0" />
+        </div>
       </div>
       <div id="rightSide">
         <p id="smallText">
@@ -57,27 +60,22 @@
         </p>
         <div id="imgPreview">
           <div class="beefCard">
-            <div class="card1" id="beefImg">
-              <p id="priceTxt">4.99</p>
-              <p id="dateTxt">22/08/2024</p>
-            </div>
+            <div class="card1 beefImg"></div>
             <div id="bottomTxt">
-              <button id="minusBtn">-</button>
-              <p class="tagLine">1</p>
-              <button id="plusBtn">+</button>
+              <p class="tagLine">Spaghetti Bolognese</p>
             </div>
           </div>
 
           <div class="beefCard">
-            <div class="card1"></div>
+            <div class="card1 indCard"></div>
             <p class="tagLine">Beef Mince 500gm</p>
           </div>
           <div class="beefCard">
-            <div class="card1"></div>
+            <div class="card1 indCard"></div>
             <p class="tagLine">Beef Mince 500gm</p>
           </div>
           <div class="beefCard">
-            <div class="card1"></div>
+            <div class="card1 indCard"></div>
             <p class="tagLine">Beef Mince 500gm</p>
           </div>
         </div>

@@ -11,6 +11,17 @@
   width: 25vw;
   border: 1px solid black;
 }
+#resultBoxHeading {
+  padding: 1vw;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #ccc 0%, #ccc 50%, #f00 50%, #f00 100%);
+  height: 4px;
+  border-radius: 2px;
+}
+input {
+  margin-left: 3vw;
+}
 #rightSide {
   width: 67vw;
   height: 100vw;
@@ -26,63 +37,43 @@
   display: inline-flex;
   height: auto;
   width: auto;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .card1 {
   display: inline-block;
-  width: 15vw;
+  width: 20vw;
   height: 17vw;
   border: 1px solid black;
   margin: 1vw 0vw 0vw 1vw;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Square_gray.svg/1200px-Square_gray.svg.png");
   padding: 0.4vw;
 }
-#beefImg {
+.beefImg {
   display: flex;
-  width: 15vw;
-  height: 17vw;
+  width: 25vw;
+  height: 22vw;
   background-image: url("https://greenvalley.pk/wp-content/uploads/2023/01/Beef-Mince-1Kg.jpg");
   background-size: contain;
+  background-repeat: no-repeat;
   justify-content: flex-start;
 }
-#priceTxt {
-  display: inline-block;
-  font-weight: bolder;
-  width: 8vw;
-}
-#dateTxt {
-  display: inline-block;
-  overflow: hidden;
-  word-wrap: break-word;
-  align-self: flex-end;
+.indCard {
+  display: flex;
+  width: 25vw;
+  height: 22vw;
+  justify-content: flex-start;
 }
 .tagLine {
   display: inline-block;
   font-size: small;
   margin-left: 1vw;
   text-align: center;
-}
-#plusBtn {
-  min-width: 2vw;
-  min-height: 2vw;
-  width: 2vw;
-  height: 2vw;
-  border: 1px solid black;
-}
-#plusBtn :hover {
-  background-color: rgb(96, 96, 96);
+  /* margin-top: 0.5vw; */
 }
 #bottomTxt {
   margin-top: 0.5vw;
   display: flex;
   justify-content: space-between;
-}
-#minusBtn {
-  margin-left: 1vw;
-  min-width: 2vw;
-  min-height: 2vw;
-  width: 2vw;
-  height: 2vw;
-  border: 1px solid black;
 }
