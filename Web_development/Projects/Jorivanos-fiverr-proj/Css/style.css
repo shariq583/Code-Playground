@@ -59,7 +59,7 @@ body {
   padding: 2vw 4vw;
 }
 #firstCardStock {
-  height: 15vw;
+  height: 20vw;
   width: 100vw;
   display: flex;
   justify-content: space-evenly;
@@ -67,4 +67,22 @@ body {
 }
 #firstCardStock img {
   width: 15vw;
+  height: 17vw;
+}
+#secondCard {
+  height: 20vw;
+}
+#secondCardHeading {
+  padding: 2vw 4vw;
+}
+#secondCardStock {
+  height: 10vw;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#secondCardStock img {
+  width: 15vw;
+  height: 10vw;
 }
