@@ -40,23 +40,20 @@
 }
 #priceTxt {
   display: inline-block;
-  color: rgb(55, 0, 255);
   font-weight: bolder;
 }
 #beefImg {
   display: flex;
   width: 15vw;
   height: 15vw;
-  background-image: url("https://images.albertsons-media.com/is/image/ABS/188100109?$ng-ecom-pdp-desktop$&defaultImage=Not_Available");
-  background-size: cover;
+  background-image: url("https://greenvalley.pk/wp-content/uploads/2023/01/Beef-Mince-1Kg.jpg");
+  background-size: contain;
   justify-content: flex-start;
 }
 #dateTxt {
-  margin-top: 5vw;
-  align-self: flex-end;
-  float: right;
-  font-weight: bolder;
-  color: rgb(55, 0, 255);
+  display: inline-block;
+  padding-left: 7vw;
+  padding-top: 12vw;
 }
 .tagLine {
   display: inline-block;
