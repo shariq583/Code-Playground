@@ -23,11 +23,67 @@
   font-size: small;
 }
 #imgPreview {
-  display: inline-block;
+  display: inline-flex;
   height: auto;
   width: auto;
+  justify-content: center;
+  align-items: center;
 }
-#imgPreview img {
+.card1 {
+  display: inline-block;
   width: 15vw;
-  padding: 1vw;
+  height: 15vw;
+  border: 1px solid black;
+  margin: 1vw 0vw 0vw 1vw;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Square_gray.svg/1200px-Square_gray.svg.png");
+  padding: 0.4vw;
+}
+#priceTxt {
+  display: inline-block;
+  color: rgb(55, 0, 255);
+  font-weight: bolder;
+}
+#beefImg {
+  display: flex;
+  width: 15vw;
+  height: 15vw;
+  background-image: url("https://images.albertsons-media.com/is/image/ABS/188100109?$ng-ecom-pdp-desktop$&defaultImage=Not_Available");
+  background-size: cover;
+  justify-content: flex-start;
+}
+#dateTxt {
+  margin-top: 5vw;
+  align-self: flex-end;
+  float: right;
+  font-weight: bolder;
+  color: rgb(55, 0, 255);
+}
+.tagLine {
+  display: inline-block;
+  font-size: small;
+  margin-left: 1vw;
+  text-align: center;
+}
+#plusBtn {
+  min-width: 2vw;
+  min-height: 2vw;
+  width: 2vw;
+  height: 2vw;
+  border: 1px solid black;
+}
+#plusBtn :hover {
+  background-color: rgb(96, 96, 96);
+}
+#bottomTxt {
+  margin-top: 0.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+#minusBtn {
+  margin-left: 1vw;
+  min-width: 2vw;
+  min-height: 2vw;
+  width: 2vw;
+  height: 2vw;
+  border: 1px solid black;
 }
