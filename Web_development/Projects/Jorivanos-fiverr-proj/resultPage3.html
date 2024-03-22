@@ -50,12 +50,34 @@
         <h1 id="mainHeading">Resultaten</h1>
         <div id="resultBox">
           <h2 id="resultBoxHeading">Bereidingstijd</h2>
-          <input type="range" min="0" max="100" step="50" value="0" />
-          <datalist id="tickmarks">
-            <option value="0">0</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-          </datalist>
+          <div class="rangeSlider">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              step="50"
+              value="0"
+              list="tickmarks"
+            />
+            <datalist id="tickmarks">
+              <option value="0">Heel Kort</option>
+              <option value="50">Gemiddeld</option>
+              <option value="100">Heel lang</option>
+            </datalist>
+          </div>
+          <div id="stashInfo">
+            <h2 id="resultStashHeading">Mijin vorraad</h2>
+            <form id="stashChoice">
+              <div class="choiceBox">
+                <input type="checkbox" name="box1" id="firstBox" />
+                <p class="checkTxt">Allen producten die ik op vorraad hela</p>
+              </div>
+              <div class="choiceBox">
+                <input type="checkbox" name="box2" id="secondBox" />
+                <p class="checkTxt">Sammige producten heb ik op vorraad</p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <div id="rightSide">

@@ -8,7 +8,7 @@
 #resultBox {
   margin: auto 3vw;
   height: 90vw;
-  width: 25vw;
+  width: 27vw;
   border: 1px solid black;
 }
 #resultBoxHeading {
@@ -19,9 +19,31 @@ input[type="range"]::-webkit-slider-runnable-track {
   height: 4px;
   border-radius: 2px;
 }
-input {
-  margin-left: 5vw;
+#resultBox input {
+  margin: 1vw;
 }
+.rangeSlider {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#tickmarks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+#tickmarks option {
+  width: 33.33%;
+  text-align: center;
+  font-size: small;
+}
+#resultStashHeading {
+  padding: 1vw;
+}
+
 #rightSide {
   width: 67vw;
   height: 100vw;
