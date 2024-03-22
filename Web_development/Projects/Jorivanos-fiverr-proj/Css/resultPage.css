@@ -1,0 +1,33 @@
+#leftSide {
+  display: inline-block;
+  width: 30vw;
+}
+#mainHeading {
+  margin: 2vw;
+}
+#resultBox {
+  margin: auto 3vw;
+  height: 90vw;
+  width: 25vw;
+  border: 1px solid black;
+}
+#rightSide {
+  width: 67vw;
+  height: 100vw;
+  float: right;
+}
+#smallText {
+  margin-top: 3vw;
+  margin-right: 2vw;
+  float: right;
+  font-size: small;
+}
+#imgPreview {
+  display: inline-block;
+  height: auto;
+  width: auto;
+}
+#imgPreview img {
+  width: 15vw;
+  padding: 1vw;
+}
