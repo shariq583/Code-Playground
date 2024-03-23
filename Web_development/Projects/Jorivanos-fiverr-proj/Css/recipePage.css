@@ -117,10 +117,18 @@
 #addToCart {
   margin-top: 1vw;
   height: 4vw;
+  border: none;
+  background-color: rgb(199, 199, 199);
+  padding: 1vw;
 }
 #rightDownBox {
   border: 1px solid black;
   width: 45vw;
   height: 30vw;
 }
-#rightDownHeading
+#rightDownHeading {
+  padding: 1vw;
+}
+#recipeList {
+  margin-right: 1vw;
+}
