@@ -1,0 +1,60 @@
+#dateConfirmPopup {
+  text-align: center;
+}
+#day1 {
+  border: none;
+  border-radius: 5vw;
+  width: 3vw;
+  height: 3vw;
+}
+#day2 {
+  border: none;
+  border-radius: 5vw;
+  width: 3vw;
+  height: 3vw;
+}
+#day3 {
+  border: none;
+  border-radius: 5vw;
+  width: 3vw;
+  height: 3vw;
+}
+#day4 {
+  border: none;
+  border-radius: 5vw;
+  width: 3vw;
+  height: 3vw;
+}
+#day5 {
+  border: none;
+  border-radius: 5vw;
+  width: 3vw;
+  height: 3vw;
+}
+#day6 {
+  border: none;
+  border-radius: 5vw;
+  width: 3vw;
+  height: 3vw;
+}
+#day7 {
+  border: none;
+  border-radius: 5vw;
+  width: 3vw;
+  height: 3vw;
+}
+#textLine2 {
+  margin: 1vw;
+}
+#cardAddBtn {
+  width: 11vw;
+  border: none;
+  height: 5vw;
+  text-align: center;
+  padding: 0vw 1vw;
+  text-wrap: pretty;
+}
+#succesMsg {
+  text-align: center;
+  margin-top: 45vh;
+}
