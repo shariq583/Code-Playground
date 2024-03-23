@@ -34,10 +34,11 @@
   width: 15vw;
   height: 17vw;
   border: 1px solid black;
-  margin: 1vw 0vw 0vw 1vw;
+  margin: 0vw 0vw 0vw 1vw;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Square_gray.svg/1200px-Square_gray.svg.png");
   padding: 0.4vw;
 }
+
 #beefImg {
   display: flex;
   width: 15vw;
@@ -56,10 +57,12 @@
   overflow: hidden;
   word-wrap: break-word;
   align-self: flex-end;
+  font-size: 0.7rem;
 }
 .tagLine {
   display: inline-block;
   font-size: small;
+  margin-top: 0vw;
   margin-left: 1vw;
   text-align: center;
 }
@@ -69,6 +72,7 @@
   width: 2vw;
   height: 2vw;
   border: 1px solid black;
+  font-size: 1rem;
 }
 #plusBtn :hover {
   background-color: rgb(96, 96, 96);
@@ -85,4 +89,33 @@
   width: 2vw;
   height: 2vw;
   border: 1px solid black;
+}
+@media only screen and (max-width: 800px) {
+  #beefImg {
+    width: 26vw;
+    height: 35vw;
+    background-repeat: no-repeat;
+  }
+  .card1 {
+    width: 25vw;
+    height: 35vw;
+    margin: 2vw;
+  }
+  #imgPreview {
+    flex-wrap: wrap;
+  }
+  .grayCards {
+    display: flex;
+    flex-direction: column;
+  }
+  #plusBtn {
+    margin-top: 2vw;
+    transform: scale(2);
+    font-size: xx-small;
+  }
+  #minusBtn {
+    margin-top: 2vw;
+    transform: scale(2);
+    font-size: xx-small;
+  }
 }
