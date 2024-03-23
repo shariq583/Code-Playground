@@ -1,48 +1,13 @@
 #dateConfirmPopup {
   text-align: center;
 }
-#day1 {
+.day {
   border: none;
   border-radius: 5vw;
   width: 3vw;
   height: 3vw;
 }
-#day2 {
-  border: none;
-  border-radius: 5vw;
-  width: 3vw;
-  height: 3vw;
-}
-#day3 {
-  border: none;
-  border-radius: 5vw;
-  width: 3vw;
-  height: 3vw;
-}
-#day4 {
-  border: none;
-  border-radius: 5vw;
-  width: 3vw;
-  height: 3vw;
-}
-#day5 {
-  border: none;
-  border-radius: 5vw;
-  width: 3vw;
-  height: 3vw;
-}
-#day6 {
-  border: none;
-  border-radius: 5vw;
-  width: 3vw;
-  height: 3vw;
-}
-#day7 {
-  border: none;
-  border-radius: 5vw;
-  width: 3vw;
-  height: 3vw;
-}
+
 #textLine2 {
   margin: 1vw;
 }
@@ -57,4 +22,13 @@
 #succesMsg {
   text-align: center;
   margin-top: 45vh;
+}
+@media only screen and (max-width: 800vw) {
+  #cardAddBtn {
+    height: 10vw;
+  }
+  .day {
+    width: 5vw;
+    height: 5vw;
+  }
 }

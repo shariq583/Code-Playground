@@ -87,6 +87,7 @@
   width: 2vw;
   height: 2vw;
   border: 1px solid black;
+  line-height: 2vw;
 }
 #plusBtn :hover {
   background-color: rgb(96, 96, 96);
@@ -98,6 +99,7 @@
   width: 2vw;
   height: 2vw;
   border: 1px solid black;
+  line-height: 2vw;
 }
 #ingredient {
   padding: 1vw;
@@ -117,20 +119,31 @@
 }
 #addToCart {
   margin-top: 1vw;
-  height: 4vw;
   border: none;
   background-color: rgb(199, 199, 199);
   padding: 1vw;
+  width: 11vw;
+  height: 5vw;
+  text-align: center;
+  padding: 0vw 1vw;
+  text-wrap: pretty;
 }
 #rightDownBox {
   border: 1px solid black;
   width: 45vw;
   height: 30vw;
-  overflow: scroll;
 }
 #rightDownHeading {
   padding: 1vw;
 }
 #recipeList {
   margin-right: 1vw;
+}
+@media only screen and (min-width: 800px) {
+  #rightDownBox {
+    overflow: scroll;
+  }
+  #addToCart {
+    height: 8vw;
+  }
 }
