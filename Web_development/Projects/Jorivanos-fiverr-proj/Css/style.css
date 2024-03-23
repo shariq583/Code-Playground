@@ -34,7 +34,7 @@ body {
   width: 2vw;
 }
 #searchField::placeholder {
-  font-size: 14px;
+  font-size: 1rem;
 }
 #personImg {
   width: 3vw;
@@ -66,8 +66,9 @@ body {
   align-items: center;
 }
 #firstCardStock img {
-  width: 15vw;
-  height: 17vw;
+  width: 20vw;
+  height: 25vw;
+  padding: 2vw;
 }
 #secondCard {
   height: 20vw;
@@ -85,4 +86,40 @@ body {
 #secondCardStock img {
   width: 15vw;
   height: 10vw;
+}
+@media only screen and (max-width: 800px) {
+  #navMain {
+    height: 15vw;
+  }
+  #logoImg {
+    transform: scale(2);
+    mix-blend-mode: darken;
+  }
+  #personImg {
+    transform: scale(2);
+    mix-blend-mode: darken;
+  }
+  #cartImg {
+    transform: scale(3);
+    mix-blend-mode: darken;
+  }
+  #searchField {
+    height: 6vw;
+    width: 47vw;
+  }
+  #searchField::placeholder {
+    font-size: smaller;
+    font-weight: 500;
+  }
+  #searchIcon {
+    transform: scale(2);
+  }
+  #firstCardStock {
+    overflow: scroll;
+  }
+  #firstCardStock img {
+    width: 25vw;
+    height: 42vw;
+    overflow: hidden;
+  }
 }
