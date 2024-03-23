@@ -66,6 +66,7 @@
   border: 1px solid black;
   width: 35vw;
   height: 45vw;
+  overflow: scroll;
 }
 #personCountTxt {
   display: inline-block;
@@ -125,10 +126,14 @@
   border: 1px solid black;
   width: 45vw;
   height: 30vw;
+  overflow: scroll;
 }
 #rightDownHeading {
   padding: 1vw;
 }
 #recipeList {
   margin-right: 1vw;
+}
+#dateConfirmPopup {
+  text-align: center;
 }
