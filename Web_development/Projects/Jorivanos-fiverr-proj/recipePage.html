@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mid-fidelity-prototype</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Css/style.css" />
+    <link rel="stylesheet" href="Css/recipePage.css" />
+  </head>
+  <body>
+    <nav id="navMain">
+      <img
+        id="logoImg"
+        src="https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297_640.png"
+        alt="navImg"
+      />
+      <div id="searchContainer">
+        <textarea
+          name="searchContainer"
+          id="searchField"
+          cols="30"
+          rows="10"
+          placeholder="Type hier uw product of recept..."
+        ></textarea>
+        <img
+          src="img/search-icon-png-9969.png"
+          alt="searchIcon"
+          id="searchIcon"
+        />
+      </div>
+      <div id="sidePics">
+        <img src="img/oie_Z1oeFTGV1cFF.jpg" alt="person" id="personImg" />
+        <img id="cartImg" src="img/oie_2201411SOvfjVjD.jpg" alt="cartImg" />
+      </div>
+    </nav>
+    <nav id="navSec">
+      <a href="#">Recepten</a>
+      <a href="#">Aanbiedingen</a>
+      <a href="#">Bestellen</a>
+      <a href="#">Pick-up point</a>
+    </nav>
+    <main>
+      <div id="upBox">
+        <div id="leftUpBox">
+          <h2 id="LUHeading">Spaghetti Bolognese</h2>
+          <p id="recipeDesc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+            dolore!
+          </p>
+          <div id="checkBox">
+            <input type="checkbox" name="box1" id="box1" class="checkItem" />
+            Lorem.
+            <input
+              type="checkbox"
+              name="box2"
+              id="box2"
+              class="checkItem"
+            />Lorem.
+            <input
+              type="checkbox"
+              name="box3"
+              id="box3"
+              class="checkItem"
+            />Lorem.
+          </div>
+          <div id="btnGroup">
+            <input type="button" value="" id="btn1" class="choiceBtn" />
+            <input type="button" value="" id="btn2" class="choiceBtn" />
+            <input type="button" value="" id="btn3" class="choiceBtn" />
+            <input type="button" value="" id="btnFour" class="choiceBtn" />
+            <input type="button" value="" id="btn5" class="choiceBtn" />
+          </div>
+        </div>
+        <div id="rightUpBox"></div>
+      </div>
+      <div id="downBox">
+        <div id="leftDownBox">
+          <p id="personCountTxt">Aantal personen:</p>
+          <div id="countBtns">
+            <button id="minusBtn">-</button>
+            <p class="counter">1</p>
+            <button id="plusBtn">+</button>
+          </div>
+          <p id="ingredient">Ingrediënten:</p>
+          <div id="ingList">
+            <div id="itemCollect1">
+              <input type="checkbox" name="item1" id="item1" />
+              <p class="listItemTxt">300gr spaghetti</p>
+            </div>
+            <div id="itemCollect2">
+              <input type="checkbox" name="item2" id="item2" />
+              <p class="listItemTxt">500gr tomaten in blik</p>
+            </div>
+            <div id="itemCollect3">
+              <input type="checkbox" name="item3" id="item3" />
+              <p class="listItemTxt">500gr gehakt</p>
+            </div>
+            <div id="itemCollect4">
+              <input type="checkbox" name="item4" id="item4" />
+              <p class="listItemTxt">Oregano</p>
+            </div>
+            <div id="itemCollect5">
+              <input type="checkbox" name="item5" id="item5" />
+              <p class="listItemTxt">Basillicum</p>
+            </div>
+          </div>
+          <div id="smallTxt">
+            De producten zijn automatisch gekozen op basis van je voorraad
+            <button id="addToCart">Toevoegen aan winkelmand</button>
+          </div>
+        </div>
+        <div id="rightDownBox">
+          <h3 id="rightDownHeading">Bereidingswijze</h3>
+          <ol>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud
+            </li>
+            <li>
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non
+            </li>
+            <li>
+              proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
