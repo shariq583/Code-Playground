@@ -11,6 +11,9 @@
   width: 25vw;
   border: 1px solid black;
 }
+#mobileBtns {
+  display: none;
+}
 #rightSide {
   width: 67vw;
   height: 100vw;
@@ -123,5 +126,33 @@
     margin-top: 2vw;
     transform: scale(2);
     font-size: xx-small;
+  }
+  #resultBox {
+    display: none;
+  }
+  #leftSide {
+    display: inline;
+    width: 34vw;
+    height: 10vw;
+  }
+  #rightSide {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 94vw;
+  }
+  #mobileBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobBtns {
+    width: 20vw;
+    height: 8vw;
+    border: none;
+    border-radius: 2vw;
+    margin: 1vw;
   }
 }
