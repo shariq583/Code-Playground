@@ -115,7 +115,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     height: 70vw;
   }
   #resultBox {
-    width: 50vw;
+    width: 95vw;
     height: 50vw;
     margin: 0 auto;
   }
