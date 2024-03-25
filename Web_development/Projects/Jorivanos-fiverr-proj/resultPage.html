@@ -40,7 +40,7 @@
       </div>
     </nav>
     <nav id="navSec">
-      <a href="#">Recepten</a>
+      <a href="resultPage3.html">Recepten</a>
       <a href="#">Aanbiedingen</a>
       <a href="#">Bestellen</a>
       <a href="#">Pick-up point</a>
@@ -50,38 +50,45 @@
         <h1 id="mainHeading">Resultaten</h1>
         <div id="resultBox"></div>
       </div>
+      <div id="mobileBtns">
+        <button class="mobBtns"></button>
+        <button class="mobBtns"></button>
+        <button class="mobBtns"></button>
+        <button class="mobBtns"></button>
+      </div>
       <div id="rightSide">
         <p id="smallText">
           De resultaten zijn automatisch gesorteerd op jouw ingestelde
           voorkeuren
         </p>
         <div id="imgPreview">
-          <div class="beefCard">
+          <div class="beefCard" id="firstCard">
             <div class="card1" id="beefImg">
               <p id="priceTxt">4.99&euro;</p>
               <p id="dateTxt">22/08/2024</p>
             </div>
             <div id="bottomTxt">
               <p class="tagLine">Gehakt 500gr</p>
-              <button id="plusBtn">+</button>
+              <input type="button" value="+" id="plusBtn1" />
             </div>
           </div>
 
-          <div class="beefCard">
+          <div class="beefCard grayCards">
             <div class="card1"></div>
             <p class="tagLine">Gehakt 500gr</p>
           </div>
-          <div class="beefCard">
+          <div class="beefCard grayCards">
             <div class="card1"></div>
             <p class="tagLine">Gehakt 500gr</p>
           </div>
-          <div class="beefCard">
+          <div class="beefCard grayCards">
             <div class="card1"></div>
             <p class="tagLine">Gehakt 500gr</p>
           </div>
         </div>
       </div>
     </main>
+    <script src="Func.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -1,0 +1,34 @@
+#dateConfirmPopup {
+  text-align: center;
+}
+.day {
+  border: none;
+  border-radius: 5vw;
+  width: 3vw;
+  height: 3vw;
+}
+
+#textLine2 {
+  margin: 1vw;
+}
+#cardAddBtn {
+  width: 11vw;
+  border: none;
+  height: 5vw;
+  text-align: center;
+  padding: 0vw 1vw;
+  text-wrap: pretty;
+}
+#succesMsg {
+  text-align: center;
+  margin-top: 45vh;
+}
+@media only screen and (max-width: 800vw) {
+  #cardAddBtn {
+    height: 10vw;
+  }
+  .day {
+    width: 5vw;
+    height: 5vw;
+  }
+}

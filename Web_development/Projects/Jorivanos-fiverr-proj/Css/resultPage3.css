@@ -73,6 +73,9 @@ input[type="range"]::-webkit-slider-runnable-track {
   align-items: center;
   flex-wrap: wrap;
 }
+.beefCard {
+  cursor: pointer;
+}
 .card1 {
   display: inline-block;
   width: 20vw;
@@ -108,92 +111,19 @@ input[type="range"]::-webkit-slider-runnable-track {
   display: flex;
   justify-content: space-between;
 }
-/* Media queries for responsiveness */
-/* @media (max-width: 768px) {
+/* Media queries */
+@media only screen and (max-width: 800px) {
   #leftSide {
-    width: 20vw;
+    width: 100vw;
+    height: 70vw;
   }
-
-  #rightSide {
-    width: 100%;
-    float: none;
-  }
-
   #resultBox {
-    width: 90%;
-    margin: auto;
-    height: auto;
-    margin-top: 20px;
-    border: 1px solid black;
+    width: 95vw;
+    height: 50vw;
+    margin: 0 auto;
   }
-
-  #resultBoxHeading {
-    padding: 10px;
-  }
-
-  #resultBox input {
-    margin: 10px;
-  }
-
-  .rangeSlider {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #tickmarks {
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-
-  #tickmarks option {
-    width: auto;
-    text-align: center;
-    font-size: small;
-    margin: 5px;
-  }
-
   #rightSide {
-    margin-top: 20px;
+    margin-top: 0vw;
+    width: 100vw;
   }
-
-  #imgPreview {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .beefCard {
-    width: 90%;
-    margin: 10px 0;
-  }
-
-  .card1 {
-    width: 90%;
-    height: auto;
-    margin: 10px 0;
-  }
-
-  .beefImg,
-  .indCard {
-    width: 90%;
-    height: auto;
-  }
-
-  .tagLine {
-    margin-left: 0;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  #bottomTxt {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #smallText {
-    margin-top: 20px;
-    margin-right: 0;
-    float: none;
-    text-align: center;
-  }
-} */
+}
