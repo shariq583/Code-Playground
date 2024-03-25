@@ -2,7 +2,28 @@
 body {
   font-family: "Lilita One", cursive;
 }
+.center {
+  margin: 1vw 20vw;
+  transform: scale(2);
+}
 #mainHeading {
   text-align: center;
   text-decoration: underline;
+}
+#convertArea {
+  margin: calc(10vw / 2) 25vw;
+  padding: 1.5vw 2vw;
+  border: 2px solid blue;
+  border-radius: 2vw;
+}
+.from {
+  margin-bottom: 1.5vw;
+}
+.selectArea {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+.dropDown {
+  display: inline-block;
 }
