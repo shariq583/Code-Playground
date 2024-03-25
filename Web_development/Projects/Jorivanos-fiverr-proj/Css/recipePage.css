@@ -139,14 +139,21 @@
 #recipeList {
   margin-right: 1vw;
 }
+<<<<<<< HEAD
 @media only screen and (max-width: 800px) {
+=======
+@media only screen and (min-width: 800px) {
+>>>>>>> f1e5d1c0db0938c2fc9e817f52f2b5391a3dc850
   #rightDownBox {
     overflow: scroll;
   }
   #addToCart {
     height: 8vw;
   }
+<<<<<<< HEAD
   #leftUpBox {
     overflow: scroll;
   }
+=======
+>>>>>>> f1e5d1c0db0938c2fc9e817f52f2b5391a3dc850
 }
