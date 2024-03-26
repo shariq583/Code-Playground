@@ -20,8 +20,12 @@ body {
 }
 .selectArea {
   display: flex;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
+}
+select {
+  border: 1px solid blue;
+  background-color: rgb(220, 220, 255);
 }
 .convertIcon {
   margin: 1vw 20vw;
@@ -33,6 +37,6 @@ body {
 .submitBtn {
   border: 1px solid blue;
   border-radius: 0.5vw;
-  background-color: rgb(135, 135, 254);
+  background-color: rgb(166, 166, 251);
   cursor: pointer;
 }
