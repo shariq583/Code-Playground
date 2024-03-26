@@ -27,6 +27,10 @@ select {
   border: 1px solid blue;
   background-color: rgb(220, 220, 255);
 }
+.formFlag {
+  width: 32px;
+  border: 1px solid black;
+}
 .convertIcon {
   margin: 1vw 20vw;
   transform: scale(2);
