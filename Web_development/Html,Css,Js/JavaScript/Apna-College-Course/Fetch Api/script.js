@@ -21,3 +21,14 @@
 // //     });
 // // };
 // getInfo(num);
+let baseUrl =
+  "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024.3.26/v1/currencies/";
+let dropDowns = document.querySelectorAll(".dropDown select ");
+dropDowns.forEach((opt) => {
+  for (code in countryList) {
+    let newOpt = document.createElement("option");
+    newOpt.innerText = code;
+    newOpt.value = code;
+    opt.append(newOpt);
+  }
+});

@@ -4,7 +4,6 @@ body {
 }
 .center {
   margin: 1vw 20vw;
-  transform: scale(2);
 }
 #mainHeading {
   text-align: center;
@@ -24,6 +23,16 @@ body {
   justify-content: stretch;
   align-items: center;
 }
+.convertIcon {
+  margin: 1vw 20vw;
+  transform: scale(2);
+}
 .dropDown {
   display: inline-block;
+}
+.submitBtn {
+  border: 1px solid blue;
+  border-radius: 0.5vw;
+  background-color: rgb(135, 135, 254);
+  cursor: pointer;
 }
