@@ -21,7 +21,12 @@
         <div class="from">
           <p class="fromTxt">Enter Amount:</p>
           <div class="selectArea">
-            <input type="text" name="from" id="fromField" />
+            <input
+              type="text"
+              name="from"
+              id="fromField"
+              placeholder="Enter some amount"
+            />
             <div class="dropDown">
               <select name="fromSelect" id="fromVal">
                 <option value="default">Select a currency</option>
@@ -42,8 +47,11 @@
             </div>
             <img src="" class="formFlag" alt="toFlag" id="toImg" />
           </div>
+          <div id="msgBox">
+            <p id="msgTxt">Enter a currency and some Value</p>
+          </div>
         </div>
-        <button class="center submitBtn">Convert Now</button>
+        <!-- <button class="center submitBtn">Convert Now</button> -->
       </form>
     </div>
 

@@ -21,13 +21,16 @@
 // //     });
 // // };
 // getInfo(num);
+
 // Project Code :-
 let baseUrl =
   "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024.3.26/v1/currencies/";
 let fromImg = document.querySelector("#fromImg");
 let toImg = document.querySelector("#toImg");
 let dropDowns = document.querySelectorAll(".dropDown select ");
-
+let fromTxtBox = document.querySelector("#fromField");
+let msgTxt = document.querySelector("#msgTxt");
+// dropDown Update :
 dropDowns.forEach((opt) => {
   for (code in countryList) {
     let newOpt = document.createElement("option");
@@ -39,9 +42,11 @@ dropDowns.forEach((opt) => {
     changeFlag(evt);
   });
 });
+
+// flagUpdate :
 const changeFlag = (element) => {
   let inpCurr = element.target.value;
-  let countCode = countryList[inpCurr];
+  var countCode = countryList[inpCurr];
   let imgUrl = `https://flagsapi.com/${countCode}/flat/32.png`;
   console.log(element.target.id);
   if (element.target.id == "fromVal") {
@@ -49,4 +54,8 @@ const changeFlag = (element) => {
   } else if (element.target.id == "toVal") {
     toImg.src = imgUrl;
   }
+  logCode(inpCurr);
+};
+const logCode = (code) => {
+  let currUrl;
 };
