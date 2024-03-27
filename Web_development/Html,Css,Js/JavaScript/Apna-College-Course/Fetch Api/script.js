@@ -29,6 +29,7 @@ let fromImg = document.querySelector("#fromImg");
 let toImg = document.querySelector("#toImg");
 let dropDowns = document.querySelectorAll(".dropDown select ");
 let fromTxtBox = document.querySelector("#fromField");
+let toTxtBox = document.querySelector("#toField");
 let msgTxt = document.querySelector("#msgTxt");
 // dropDown Update :
 dropDowns.forEach((opt) => {
@@ -42,7 +43,6 @@ dropDowns.forEach((opt) => {
     changeFlag(evt);
   });
 });
-
 // flagUpdate :
 const changeFlag = (element) => {
   let inpCurr = element.target.value;
@@ -54,8 +54,15 @@ const changeFlag = (element) => {
   } else if (element.target.id == "toVal") {
     toImg.src = imgUrl;
   }
+
   logCode(inpCurr);
 };
+
 const logCode = (code) => {
-  let currUrl;
+  console.log(code);
+  let currUrl = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${code.toLowerCase()}.json`;
+  fromTxtBox.addEventListener("keyup", () => {
+    let currRate = fetch(currUrl);
+    console.log(currRate);
+  });
 };
