@@ -38,9 +38,12 @@ select {
 .dropDown {
   display: inline-block;
 }
-.submitBtn {
-  border: 1px solid blue;
-  border-radius: 0.5vw;
-  background-color: rgb(166, 166, 251);
-  cursor: pointer;
+#msgTxt {
+  margin: 2vw 0vw;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#updateDate {
+  text-align: center;
+  font-size: 1rem;
 }

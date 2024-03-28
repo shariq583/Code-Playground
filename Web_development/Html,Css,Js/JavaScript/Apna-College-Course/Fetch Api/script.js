@@ -31,6 +31,7 @@ let dropDowns = document.querySelectorAll(".dropDown select ");
 let fromTxtBox = document.querySelector("#fromField");
 let toTxtBox = document.querySelector("#toField");
 let msgTxt = document.querySelector("#msgTxt");
+let dateTxt = document.querySelector("#updateDate");
 // dropDown Update :
 dropDowns.forEach((opt) => {
   for (code in countryList) {
@@ -57,8 +58,26 @@ const changeFlag = (element) => {
 };
 
 fromTxtBox.addEventListener("keyup", () => {
-  logCode(dropDowns[0].value);
+  logCode(dropDowns[0].value, dropDowns[1].value);
 });
-const logCode = (code) => {
-  let currUrl = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${code.toLowerCase()}.json`;
+const logCode = (codeFrom, codeTo) => {
+  let currUrl = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${codeFrom.toLowerCase()}.json`;
+  let currResponse = fetch(currUrl).then((res) => {
+    let resJson = res.json().then((resJson) => {
+      codeFromString = String(codeFrom);
+      codeLowerFrom = codeFrom.toLowerCase();
+      codeLowerTo = codeTo.toLowerCase();
+      // resJson[codeLowerFrom][codeLowerTo]
+      updateCurr(resJson[codeLowerFrom][codeLowerTo]);
+      updateDate(resJson.date);
+    });
+  });
+};
+const updateCurr = (updateNum) => {
+  let amount = fromTxtBox.value;
+  let updateAmt = amount * updateNum;
+  toTxtBox.placeholder = updateAmt;
+};
+const updateDate = (inpDate) => {
+  dateTxt.innerText = inpDate;
 };
