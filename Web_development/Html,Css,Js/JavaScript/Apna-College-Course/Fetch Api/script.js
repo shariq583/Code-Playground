@@ -45,7 +45,7 @@ dropDowns.forEach((opt) => {
 });
 // flagUpdate :
 const changeFlag = (element) => {
-  let inpCurr = element.target.value;
+  var inpCurr = element.target.value;
   var countCode = countryList[inpCurr];
   let imgUrl = `https://flagsapi.com/${countCode}/flat/32.png`;
   console.log(element.target.id);
@@ -54,15 +54,11 @@ const changeFlag = (element) => {
   } else if (element.target.id == "toVal") {
     toImg.src = imgUrl;
   }
-
-  logCode(inpCurr);
 };
 
+fromTxtBox.addEventListener("keyup", () => {
+  logCode(dropDowns[0].value);
+});
 const logCode = (code) => {
-  console.log(code);
   let currUrl = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${code.toLowerCase()}.json`;
-  fromTxtBox.addEventListener("keyup", () => {
-    let currRate = fetch(currUrl);
-    console.log(currRate);
-  });
 };
