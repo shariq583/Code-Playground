@@ -62,16 +62,19 @@ fromTxtBox.addEventListener("keyup", () => {
 });
 const logCode = (codeFrom, codeTo) => {
   let currUrl = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${codeFrom.toLowerCase()}.json`;
-  let currResponse = fetch(currUrl).then((res) => {
-    let resJson = res.json().then((resJson) => {
-      codeFromString = String(codeFrom);
-      codeLowerFrom = codeFrom.toLowerCase();
-      codeLowerTo = codeTo.toLowerCase();
-      // resJson[codeLowerFrom][codeLowerTo]
-      updateCurr(resJson[codeLowerFrom][codeLowerTo]);
-      updateDate(resJson.date);
+  if (fromTxtBox.value >0) {
+    
+    let currResponse = fetch(currUrl).then((res) => {
+      let resJson = res.json().then((resJson) => {
+        codeFromString = String(codeFrom);
+        codeLowerFrom = codeFrom.toLowerCase();
+        codeLowerTo = codeTo.toLowerCase();
+        // resJson[codeLowerFrom][codeLowerTo]
+        updateCurr(resJson[codeLowerFrom][codeLowerTo]);
+        updateDate(resJson.date);
+      });
     });
-  });
+  }
 };
 const updateCurr = (updateNum) => {
   let amount = fromTxtBox.value;
