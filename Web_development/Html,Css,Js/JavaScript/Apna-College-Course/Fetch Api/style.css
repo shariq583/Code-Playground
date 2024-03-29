@@ -54,7 +54,10 @@ select {
 }
 .dropDown {
   display: inline-block;
+  scale: 1.1;
+  padding: 1vw;
 }
+
 #msgTxt {
   margin: 2vw 0vw;
   text-align: center;
