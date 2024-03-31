@@ -1,9 +1,14 @@
 import React from "react";
-
-const list = () => {
+import TodoItem from "./todoItem";
+import "../App.css";
+const list = (props) => {
   return (
-    <div>
-      <p>list works</p>
+    <div className="container">
+      <h4 className="text-center ">To Do List</h4>
+      <div className="task">
+        <TodoItem task={props.todo[0]} />
+        <button className="btn btn-danger">Delete</button>
+      </div>
     </div>
   );
 };
