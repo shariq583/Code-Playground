@@ -6,8 +6,11 @@ const list = (props) => {
     <div className="container">
       <h4 className="text-center ">To Do List</h4>
       <div className="task">
-        <TodoItem task={props.todo[0]} />
-        <button className="btn btn-danger">Delete</button>
+        {props.todo.map((todo) => {
+          return (
+            <TodoItem task={todo} key={todo.sno} onDelete={props.deleteFunc} />
+          );
+        })}
       </div>
     </div>
   );
