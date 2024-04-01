@@ -5,8 +5,8 @@ const NavBar = (props) => {
   return (
     <div id="navBar">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+        <div className="container-fluid ">
+          <a className="navbar-brand px-3" href="/">
             {props.title}
           </a>
           <button
@@ -23,12 +23,12 @@ const NavBar = (props) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" aria-current="page" href="/">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link px-3" href="/">
                   {props.aboutTxt}
                 </a>
               </li>
