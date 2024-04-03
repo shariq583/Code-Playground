@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 const NavBar = (props) => {
   return (
     <div id="navBar">
       <nav
-        className={`navbar navbar-expand-lg bg-body-tertiary navbar-${props.mode}`}
+        className={`navbar navbar-expand-lg bg-body-tertiary navbar bg-primary `}
+        data-bs-theme={`${props.mode}`}
       >
         <div className="container-fluid ">
           <a className="navbar-brand px-3" href="/">
@@ -35,6 +38,7 @@ const NavBar = (props) => {
                 </a>
               </li>
             </ul>
+            <FontAwesomeIcon icon="fa-regular fa-moon" />
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"

@@ -32,7 +32,7 @@ const TextForm = (props) => {
   };
 
   const handleRanClick = () => {
-    const randNumber = parseInt(randomTextRef.current.value); // Get value using ref
+    const randNumber = parseInt(randomTextRef.current.value);
     console.log(randNumber);
     setNumWords(randNumber); // Update numWords state
     const loremText = loremIpsum({ count: numWords, units: "words" });

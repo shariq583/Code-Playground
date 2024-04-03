@@ -8,7 +8,7 @@ const About = () => {
 
   const [btn, changeBtn] = useState("Switch to light");
   const changeFunc = () => {
-    if (theme.color == "white") {
+    if (theme.color === "white") {
       changeTheme({
         color: "black",
         backgroundColor: "white",
