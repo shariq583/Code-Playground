@@ -1,11 +1,13 @@
 import React, { useState, useRef } from "react";
+import { loremIpsum } from "lorem-ipsum";
 
-const TextFrom = (props) => {
+const TextForm = (props) => {
   const [text, setText] = useState("");
   const [separator, setSeparator] = useState("-");
   const sepRef = useRef(null);
-  const sepBtn = document.querySelector("#sepBtn");
-  let randNum = document.querySelector("#randText");
+  const randomTextRef = useRef(null); // Define randomTextRef
+  const [numWords, setNumWords] = useState(100);
+
   const handleUpClick = () => {
     let upText = text.toUpperCase();
     setText(upText);
@@ -28,13 +30,19 @@ const TextFrom = (props) => {
     let newText = text.split(" ").join(separator);
     setText(newText);
   };
-  const handleRanClick = (num) => {
-    let randomText = `lorem${num}`;
-    setText(randomText);
+
+  const handleRanClick = () => {
+    const randNumber = parseInt(randomTextRef.current.value); // Get value using ref
+    console.log(randNumber);
+    setNumWords(randNumber); // Update numWords state
+    const loremText = loremIpsum({ count: numWords, units: "words" });
+    setText(loremText);
   };
+
   const handleChange = (e) => {
     setText(e.target.value);
   };
+
   return (
     <div className="container my-3 mb-2">
       <h2>{props.heading}</h2>
@@ -52,11 +60,7 @@ const TextFrom = (props) => {
       <button className="btn btn-primary mx-3" onClick={handleLowClick}>
         Convert to LowerCase
       </button>
-      <button
-        className="btn btn-primary mx-3 my-3"
-        id="sepBtn"
-        onClick={handleSepClick}
-      >
+      <button className="btn btn-primary mx-3 my-3" onClick={handleSepClick}>
         Add some separator
       </button>
       <select
@@ -69,16 +73,10 @@ const TextFrom = (props) => {
         <option value="_">_</option>
         <option value="|">|</option>
       </select>
-      <button
-        className="btn btn-primary mx-3 my-3"
-        id="sepBtn"
-        onClick={() => {
-          handleRanClick(randNum.value);
-        }}
-      >
+      <button className="btn btn-primary mx-3 my-3" onClick={handleRanClick}>
         Add random text
-        <input type="number" name="textNo" id="randomText" />
       </button>
+      <input type="number" name="textNo" id="randomText" ref={randomTextRef} />
       <button
         className="btn btn-danger my-3 float-end"
         onClick={handleClearText}
@@ -96,4 +94,4 @@ const TextFrom = (props) => {
   );
 };
 
-export default TextFrom;
+export default TextForm;
