@@ -48,7 +48,7 @@ const TextForm = (props) => {
       <h2>{props.heading}</h2>
       <textarea
         className="form-control"
-        id="exampleFormControlTextarea1"
+        id="textInput"
         rows="8"
         placeholder="Enter text here"
         value={text}
@@ -60,7 +60,7 @@ const TextForm = (props) => {
       <button className="btn btn-primary mx-3" onClick={handleLowClick}>
         Convert to LowerCase
       </button>
-      <button className="btn btn-primary mx-3 my-3" onClick={handleSepClick}>
+      <button className="btn btn-primary  my-3" onClick={handleSepClick}>
         Add some separator
       </button>
       <select
@@ -68,20 +68,29 @@ const TextForm = (props) => {
         ref={sepRef}
         onChange={handleSepChange}
         value={separator}
+        id="selectElement"
+        className="mx-2"
       >
         <option value="-">-</option>
         <option value="_">_</option>
         <option value="|">|</option>
       </select>
-      <button className="btn btn-primary mx-3 my-3" onClick={handleRanClick}>
+      <button className="btn btn-primary my-3" onClick={handleRanClick}>
         Add random text
       </button>
-      <input type="number" name="textNo" id="randomText" ref={randomTextRef} />
+      <input
+        type="number"
+        name="textNo"
+        id="randomText"
+        ref={randomTextRef}
+        className="mx-3"
+      />
       <button
-        className="btn btn-danger my-3 float-end"
+        className="btn btn-danger float-end my-3"
         onClick={handleClearText}
       >
         Clear Text
+        <i className="bi bi-trash3-fill mx-2"></i>
       </button>
       <h2>Text Details:</h2>
       <p>

@@ -31,7 +31,7 @@ const NavBar = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link px-3" href="/">
+                <a className="nav-link " href="/">
                   {props.aboutTxt}
                 </a>
               </li>
