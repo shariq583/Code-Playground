@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-config.autoAddCss = false;
+import "bootstrap-icons/font/bootstrap-icons.css";
 const NavBar = (props) => {
   return (
     <div id="navBar">
@@ -38,18 +36,9 @@ const NavBar = (props) => {
                 </a>
               </li>
             </ul>
-            <FontAwesomeIcon icon="fa-regular fa-moon" />
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            <button className="btn btn-primary" onClick={props.changeFunc}>
+              <i className={`${props.btnStyle}`}></i>
+            </button>
           </div>
         </div>
       </nav>
