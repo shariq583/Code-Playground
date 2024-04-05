@@ -4,7 +4,7 @@ const Alert = (props) => {
   return (
     props.aboutTxt && (
       <div
-        className="alert alert-warning alert-dismissible fade show"
+        className={`alert alert-${props.aboutTxt.state.toLowerCase()} alert-dismissible fade show`}
         role="alert"
       >
         <strong>
@@ -12,13 +12,6 @@ const Alert = (props) => {
           {" :"}
           {props.aboutTxt.message}
         </strong>
-        )}
-        <button
-          type="button"
-          className="btn-close"
-          data-bs-dismiss="alert"
-          aria-label="Close"
-        ></button>
       </div>
     )
   );

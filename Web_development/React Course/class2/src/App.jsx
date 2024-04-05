@@ -11,6 +11,9 @@ function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, state) => {
     setAlert({ message: message, state: state });
+    setTimeout(() => {
+      setAlert(null);
+    }, 875);
   };
   const changeTheme = () => {
     if (mode === "light") {
@@ -28,6 +31,7 @@ function App() {
       document.body.style.color = "black";
       document.querySelector("#textInput").style.backgroundColor = "white";
       document.querySelector("#textInput").style.color = "black";
+      showAlert("Changed To Light ", "Success");
     }
   };
   return (
@@ -40,7 +44,7 @@ function App() {
         changeFunc={changeTheme}
       />
       <Alert aboutTxt={alert} />
-      <TextPart heading="Enter Your Text Below" />
+      <TextPart heading="Enter Your Text Below" changeFunc={showAlert} />
       {/* <About /> */}
     </div>
   );

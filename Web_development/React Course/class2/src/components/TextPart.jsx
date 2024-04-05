@@ -7,19 +7,31 @@ const TextForm = (props) => {
   const sepRef = useRef(null);
   const randomTextRef = useRef(null); // Define randomTextRef
   const [numWords, setNumWords] = useState(100);
+  const [char, setChar] = useState(0);
 
   const handleUpClick = () => {
-    let upText = text.toUpperCase();
-    setText(upText);
+    if (text !== "") {
+      let upText = text.toUpperCase();
+      setText(upText);
+      props.changeFunc("Converted To Uppercase  ", "Success");
+    } else {
+      props.changeFunc("No text not found ", "Warning");
+    }
   };
 
   const handleLowClick = () => {
-    let lowText = text.toLowerCase();
-    setText(lowText);
+    if (text !== "") {
+      let lowText = text.toLowerCase();
+      setText(lowText);
+      props.changeFunc("Converted To Lowercase ", "Success");
+    } else if (text === "") {
+      props.changeFunc("No text not found ", "Warning");
+    }
   };
 
   const handleClearText = () => {
     setText("");
+    props.changeFunc("Text Cleared ", "Success");
   };
 
   const handleSepChange = (e) => {
@@ -27,22 +39,30 @@ const TextForm = (props) => {
   };
 
   const handleSepClick = () => {
-    let newText = text.split(" ").join(separator);
-    setText(newText);
+    if (text !== "") {
+      let newText = text.split(" ").join(separator);
+      setText(newText);
+      props.changeFunc(`separator "${separator}" added!`, "Success");
+    } else {
+    }
   };
 
   const handleRanClick = () => {
     const randNumber = parseInt(randomTextRef.current.value);
-    console.log(randNumber);
     setNumWords(randNumber); // Update numWords state
     const loremText = loremIpsum({ count: numWords, units: "words" });
     setText(loremText);
+    props.changeFunc("Random text added!", "Success");
   };
 
   const handleChange = (e) => {
     setText(e.target.value);
+    // Update the char state with the number of characters
+    const newText = e.target.value;
+    const numChars = newText.replace(/\s/g, "").length; // Count non-whitespace characters
+    setText(newText);
+    setChar(numChars);
   };
-
   return (
     <div className="container my-3 mb-2">
       <h2>{props.heading}</h2>
@@ -94,9 +114,9 @@ const TextForm = (props) => {
       </button>
       <h2>Text Details:</h2>
       <p>
-        {text.split(` `).length} words {text.length} characters
+        {text.trim().split(" ").length} words {char} characters
       </p>
-      <p>{0.008 * text.split(` `).length} mins to read</p>
+      <p>{0.008 * text.trim().split(" ").length} mins to read</p>
       <h2>Preview</h2>
       <p>{text}</p>
     </div>
