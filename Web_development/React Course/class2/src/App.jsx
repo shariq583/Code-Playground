@@ -20,6 +20,7 @@ function App() {
       document.body.style.color = "white";
       document.querySelector("#textInput").style.backgroundColor = "grey";
       document.querySelector("#textInput").style.color = "white";
+      showAlert("Changed To Dark ", "Success");
     } else {
       changeMode("light");
       setBtn("bi bi-moon-stars");
@@ -38,7 +39,7 @@ function App() {
         btnStyle={btn}
         changeFunc={changeTheme}
       />
-      <Alert></Alert>
+      <Alert aboutTxt={alert} />
       <TextPart heading="Enter Your Text Below" />
       {/* <About /> */}
     </div>

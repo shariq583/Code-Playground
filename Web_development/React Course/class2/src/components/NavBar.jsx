@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import "bootstrap-icons/font/bootstrap-icons.css";
 const NavBar = (props) => {
@@ -36,7 +36,11 @@ const NavBar = (props) => {
                 </a>
               </li>
             </ul>
-            <button className="btn btn-primary" onClick={props.changeFunc}>
+            <button
+              className="btn btn-primary"
+              id="themeBtn"
+              onClick={props.changeFunc}
+            >
               <i className={`${props.btnStyle}`}></i>
             </button>
           </div>
