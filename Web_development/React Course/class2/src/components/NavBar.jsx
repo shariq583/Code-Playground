@@ -45,6 +45,12 @@ const NavBar = (props) => {
             </button>
           </div>
         </div>
+        <input
+          type="color"
+          id="favcolor"
+          name="favcolor"
+          value="#ff0000"
+        ></input>
       </nav>
     </div>
   );

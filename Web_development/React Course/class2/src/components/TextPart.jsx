@@ -8,6 +8,7 @@ const TextForm = (props) => {
   const randomTextRef = useRef(null); // Define randomTextRef
   const [numWords, setNumWords] = useState(100);
   const [char, setChar] = useState(0);
+  const [word, setWord] = useState(0);
 
   const handleUpClick = () => {
     if (text !== "") {
@@ -58,10 +59,11 @@ const TextForm = (props) => {
   const handleChange = (e) => {
     setText(e.target.value);
     // Update the char state with the number of characters
-    const newText = e.target.value;
-    const numChars = newText.replace(/\s/g, "").length; // Count non-whitespace characters
-    setText(newText);
-    setChar(numChars);
+    let newText = e.target.value;
+    let newTextArr = newText.trim(" ");
+    setChar(newTextArr.replace(/\s+/g, "").length);
+    const wordCount = newText.trim().split(/\s+/).filter(Boolean).length;
+    setWord(wordCount);
   };
   return (
     <div className="container my-3 mb-2">
@@ -114,9 +116,9 @@ const TextForm = (props) => {
       </button>
       <h2>Text Details:</h2>
       <p>
-        {text.trim().split(" ").length} words {char} characters
+        {word} words {char} characters
       </p>
-      <p>{0.008 * text.trim().split(" ").length} mins to read</p>
+      <p>{0.008 * word} mins to read</p>
       <h2>Preview</h2>
       <p>{text}</p>
     </div>
