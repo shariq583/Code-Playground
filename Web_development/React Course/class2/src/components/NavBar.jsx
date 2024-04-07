@@ -1,7 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import "bootstrap-icons/font/bootstrap-icons.css";
+
 const NavBar = (props) => {
+  const change = (event) => {
+    const colorVal = event.target.value;
+    props.costumeTheme(colorVal); // Call the callback function with the color value
+  };
+
   return (
     <div id="navBar">
       <nav
@@ -36,6 +42,13 @@ const NavBar = (props) => {
                 </a>
               </li>
             </ul>
+            <input
+              type="color"
+              id="favcolor"
+              name="favcolor"
+              value={props.color} // Bind the value to the color prop
+              onChange={change} // Call the change function on color change
+            />
             <button
               className="btn btn-primary"
               id="themeBtn"
@@ -45,22 +58,21 @@ const NavBar = (props) => {
             </button>
           </div>
         </div>
-        <input
-          type="color"
-          id="favcolor"
-          name="favcolor"
-          value="#ff0000"
-        ></input>
       </nav>
     </div>
   );
 };
+
 NavBar.propTypes = {
   title: PropTypes.string.isRequired,
   aboutTxt: PropTypes.string,
+  costumeTheme: PropTypes.func.isRequired, // Define the prop type for the callback function
+  color: PropTypes.string.isRequired, // Define the prop type for the color
 };
+
 NavBar.defaultProps = {
   title: "Temp Title",
   aboutTxt: "Temp About",
 };
+
 export default NavBar;
