@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+} from "react-router-dom";
+
 import "./App.css";
 import NavBar from "./components/NavBar";
 import TextPart from "./components/TextPart";
@@ -11,18 +17,22 @@ function App() {
   const [mode, changeMode] = useState("light");
   const [btn, setBtn] = useState("bi bi-moon-stars");
   const [alert, setAlert] = useState(null);
-  const [color, setColor] = useState("#808080"); // State to hold color
+  const [color, setColor] = useState("#808080");
+
   document.title = "Text Utility - Your favorite text app";
+
   const showAlert = (message, state) => {
     setAlert({ message: message, state: state });
     setTimeout(() => {
       setAlert(null);
     }, 875);
   };
+
   const getColor = (selectedColor) => {
-    setColor(selectedColor); // Set color state with selected color
-    console.log(selectedColor); // Print selected color
+    setColor(selectedColor);
+    console.log(selectedColor);
   };
+
   const changeTheme = () => {
     if (mode === "light") {
       changeMode("dark");
@@ -32,7 +42,6 @@ function App() {
       document.querySelector("#textInput").style.backgroundColor = "grey";
       document.querySelector("#textInput").style.color = "white";
       showAlert("Changed To Dark ", "Success");
-      console.log(color);
     } else {
       changeMode("light");
       setBtn("bi bi-moon-stars");
@@ -45,28 +54,27 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="firstDiv">
-        <NavBar
-          title="Text Tool"
-          aboutTxt="About"
-          mode={mode}
-          btnStyle={btn}
-          changeFunc={changeTheme}
-          colorFunc={getColor} // Pass getColor as colorFunc prop
-        />
-        {/* Components :  */}
-        <Alert aboutTxt={alert} />
-        <Switch>
-          <Route path="/">
-            <TextPart heading="Enter Your Text Below" changeFunc={showAlert} />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <>
+      <Router>
+        <div className="firstDiv">
+          <NavBar
+            title="Text Tool"
+            aboutTxt="About"
+            mode={mode}
+            btnStyle={btn}
+            changeFunc={changeTheme}
+            colorFunc={getColor}
+          />
+          <Routes>
+            <Route path="/" exact component={T\} />{" "}
+            {<TextPart heading="Enter Your Text Below" changeFunc={showAlert} />}
+            <Route path="/about" component={About} />{" "}
+            {/* Define your about route */}
+          </Routes>
+          <Alert aboutTxt={alert} />          
+        </div>
+      </Router>
+    </>
   );
 }
 
