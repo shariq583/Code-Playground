@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 const About = () => {
   const [theme, changeTheme] = useState({
-    color: "white",
-    backgroundColor: "black",
+    color: "black",
+    backgroundColor: "white",
   });
 
   const [btn, changeBtn] = useState("Switch to light");

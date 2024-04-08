@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
   const [color, setColor] = useState(""); // State to hold color value
@@ -18,9 +19,9 @@ const NavBar = (props) => {
         data-bs-theme={`${props.mode}`}
       >
         <div className="container-fluid">
-          <a className="navbar-brand px-3" href="/">
+          <Link className="navbar-brand px-3" to="/">
             {props.title}
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -35,14 +36,14 @@ const NavBar = (props) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <Link className="nav-link" to="/">
                   {props.aboutTxt}
-                </a>
+                </Link>
               </li>
             </ul>
             <button

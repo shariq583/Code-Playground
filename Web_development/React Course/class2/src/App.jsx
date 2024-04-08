@@ -1,15 +1,18 @@
 import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import TextPart from "./components/TextPart";
 import Alert from "./components/Alert";
+import About from "./components/About";
 
 function App() {
   const [mode, changeMode] = useState("light");
   const [btn, setBtn] = useState("bi bi-moon-stars");
   const [alert, setAlert] = useState(null);
   const [color, setColor] = useState("#808080"); // State to hold color
-
+  document.title = "Text Utility - Your favorite text app";
   const showAlert = (message, state) => {
     setAlert({ message: message, state: state });
     setTimeout(() => {
@@ -42,18 +45,28 @@ function App() {
   };
 
   return (
-    <div className="firstDiv">
-      <NavBar
-        title="Text Tool"
-        aboutTxt="About"
-        mode={mode}
-        btnStyle={btn}
-        changeFunc={changeTheme}
-        colorFunc={getColor} // Pass getColor as colorFunc prop
-      />
-      <Alert aboutTxt={alert} />
-      <TextPart heading="Enter Your Text Below" changeFunc={showAlert} />
-    </div>
+    <Router>
+      <div className="firstDiv">
+        <NavBar
+          title="Text Tool"
+          aboutTxt="About"
+          mode={mode}
+          btnStyle={btn}
+          changeFunc={changeTheme}
+          colorFunc={getColor} // Pass getColor as colorFunc prop
+        />
+        {/* Components :  */}
+        <Alert aboutTxt={alert} />
+        <Switch>
+          <Route path="/">
+            <TextPart heading="Enter Your Text Below" changeFunc={showAlert} />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
