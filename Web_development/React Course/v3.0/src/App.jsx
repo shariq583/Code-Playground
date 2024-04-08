@@ -66,12 +66,17 @@ function App() {
             colorFunc={getColor}
           />
           <Routes>
-            <Route path="/" exact component={T\} />{" "}
-            {<TextPart heading="Enter Your Text Below" changeFunc={showAlert} />}
+            <Route path="/" exact component={T} />{" "}
+            {
+              <TextPart
+                heading="Enter Your Text Below"
+                changeFunc={showAlert}
+              />
+            }
             <Route path="/about" component={About} />{" "}
             {/* Define your about route */}
           </Routes>
-          <Alert aboutTxt={alert} />          
+          <Alert aboutTxt={alert} />
         </div>
       </Router>
     </>
