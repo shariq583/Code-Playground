@@ -56,6 +56,22 @@ const TextForm = (props) => {
     props.changeFunc("Random text added!", "Success");
   };
 
+  const handleCopyClick = () => {
+    const textArea = document.getElementById("textInput");
+
+    // Select the text within the textarea
+    textArea.select();
+
+    // Execute the copy command
+    document.execCommand("copy");
+
+    // Deselect the text
+    textArea.setSelectionRange(0, 0);
+
+    // Inform the user that the text has been copied
+    props.changeFunc("Text copied to clipboard", "Success");
+  };
+
   const handleChange = (e) => {
     setText(e.target.value);
     // Update the char state with the number of characters
@@ -65,6 +81,7 @@ const TextForm = (props) => {
     const wordCount = newText.trim().split(/\s+/).filter(Boolean).length;
     setWord(wordCount);
   };
+
   return (
     <div className="container my-3 mb-2">
       <h2>{props.heading}</h2>
@@ -100,6 +117,9 @@ const TextForm = (props) => {
       <button className="btn btn-primary my-3" onClick={handleRanClick}>
         Add random text
       </button>
+      <button className="btn btn-primary mx-3" onClick={handleCopyClick}>
+        Copy to clipboard
+      </button>
       <input
         type="number"
         name="textNo"
@@ -107,10 +127,7 @@ const TextForm = (props) => {
         ref={randomTextRef}
         className="mx-3"
       />
-      <button
-        className="btn btn-danger float-end my-3"
-        onClick={handleClearText}
-      >
+      <button className="btn btn-danger float-end " onClick={handleClearText}>
         Clear Text
         <i className="bi bi-trash3-fill mx-2"></i>
       </button>

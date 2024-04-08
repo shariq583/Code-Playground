@@ -1,14 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "bootstrap-icons/font/bootstrap-icons.css";
+
 const NavBar = (props) => {
+  const [color, setColor] = useState(""); // State to hold color value
+
+  const changeColor = (e) => {
+    const selectedColor = e.target.value;
+    setColor(selectedColor); // Update color state
+    props.colorFunc(selectedColor); // Invoke colorFunc prop with selected color
+  };
+
   return (
     <div id="navBar">
       <nav
-        className={`navbar navbar-expand-lg bg-body-tertiary navbar bg-primary `}
+        className={`navbar navbar-expand-lg bg-body-tertiary`}
         data-bs-theme={`${props.mode}`}
       >
-        <div className="container-fluid ">
+        <div className="container-fluid">
           <a className="navbar-brand px-3" href="/">
             {props.title}
           </a>
@@ -31,7 +40,7 @@ const NavBar = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link " href="/">
+                <a className="nav-link" href="/">
                   {props.aboutTxt}
                 </a>
               </li>
@@ -49,18 +58,28 @@ const NavBar = (props) => {
           type="color"
           id="favcolor"
           name="favcolor"
-          value="#ff0000"
+          defaultValue="#808080"
+          value={color}
+          onChange={(e) => changeColor(e)}
         ></input>
+        <label htmlFor="favcolor">Choose a dark color</label>
       </nav>
     </div>
   );
 };
+
 NavBar.propTypes = {
   title: PropTypes.string.isRequired,
   aboutTxt: PropTypes.string,
+  mode: PropTypes.string.isRequired,
+  btnStyle: PropTypes.string.isRequired,
+  changeFunc: PropTypes.func.isRequired,
+  colorFunc: PropTypes.func.isRequired,
 };
+
 NavBar.defaultProps = {
   title: "Temp Title",
   aboutTxt: "Temp About",
 };
+
 export default NavBar;
