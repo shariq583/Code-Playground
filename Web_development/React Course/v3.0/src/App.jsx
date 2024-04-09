@@ -54,32 +54,32 @@ function App() {
   };
 
   return (
-    <>
-      <Router>
-        <div className="firstDiv">
-          <NavBar
-            title="Text Tool"
-            aboutTxt="About"
-            mode={mode}
-            btnStyle={btn}
-            changeFunc={changeTheme}
-            colorFunc={getColor}
-          />
-          <Routes>
-            <Route path="/" exact component={T} />{" "}
-            {
+    <Router>
+      <div className="firstDiv">
+        <NavBar
+          title="Text Tool"
+          aboutTxt="About"
+          mode={mode}
+          btnStyle={btn}
+          changeFunc={changeTheme}
+          colorFunc={getColor}
+        />
+        <Alert aboutTxt={alert} />
+        <Routes>
+          <Route
+            path="/"
+            element={
               <TextPart
                 heading="Enter Your Text Below"
                 changeFunc={showAlert}
               />
             }
-            <Route path="/about" component={About} />{" "}
-            {/* Define your about route */}
-          </Routes>
-          <Alert aboutTxt={alert} />
-        </div>
-      </Router>
-    </>
+          />
+
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

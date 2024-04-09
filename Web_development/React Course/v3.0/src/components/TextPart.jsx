@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { loremIpsum } from "lorem-ipsum";
 
-const TextForm = (props) => {
+const TextPart = (props) => {
   const [text, setText] = useState("");
   const [separator, setSeparator] = useState("-");
   const sepRef = useRef(null);
@@ -127,7 +127,10 @@ const TextForm = (props) => {
         ref={randomTextRef}
         className="mx-3"
       />
-      <button className="btn btn-danger float-end " onClick={handleClearText}>
+      <button
+        className="btn btn-danger float-end my-3"
+        onClick={handleClearText}
+      >
         Clear Text
         <i className="bi bi-trash3-fill mx-2"></i>
       </button>
@@ -142,4 +145,4 @@ const TextForm = (props) => {
   );
 };
 
-export default TextForm;
+export default TextPart;
