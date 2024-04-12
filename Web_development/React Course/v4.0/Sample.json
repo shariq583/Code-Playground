@@ -1,0 +1,46 @@
+{
+  "status": "ok",
+  "totalResults": 68,
+  "articles": [
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "Emma Roth",
+      "title": "Apple is reportedly planning a big AI-focused M4 Mac upgrade - The Verge",
+      "description": "Apple is planning to upgrade its entire lineup of Macs with a new M4 chip that comes with an emphasis on AI, according to a report from Bloomberg.",
+      "url": "https://www.theverge.com/2024/4/11/24127529/apple-upgrade-macs-m4-chip-ai",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/Ll37ZgQZ1HePIrXxvnCUUdaCPMM=/0x0:2040x1360/1200x628/filters:focal(1015x801:1016x802)/cdn.vox-cdn.com/uploads/chorus_asset/file/25052488/236896_MacBook_Pro_14_and_16_M3_AKrales_0098.jpg",
+      "publishedAt": "2024-04-11T18:09:49Z",
+      "content": "Apple is reportedly planning a big AI-focused M4 Mac upgrade\r\nApple is reportedly planning a big AI-focused M4 Mac upgrade\r\n / The new Macs could arrive later this year and into 2025, according to Bl… [+1449 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Business Standard" },
+      "author": "Surajeet Das Gupta",
+      "title": "Apple drops term 'state-sponsored' attacks from threat notification policy - Business Standard",
+      "description": "Replaces it with 'mercenary spyware' warning in India, 91 other countries",
+      "url": "https://www.business-standard.com/technology/tech-news/apple-drops-term-state-sponsored-attacks-from-threat-notification-policy-124041100753_1.html",
+      "urlToImage": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-03/22/thumb/featurecrop/400X400/1711074267-1344.jpg",
+      "publishedAt": "2024-04-11T17:04:39Z",
+      "content": "Replaces it with 'mercenary spyware' warning in India, 91 other countries\r\nApple (Photo: Bloomberg)\r\nSurajeet Das GuptaNew Delhi\r\nApple Inc has sent a new notification to warn consumers about malicio… [+3054 chars]"
+    },
+    {
+      "source": { "id": "the-verge", "name": "The Verge" },
+      "author": "Chris Welch",
+      "title": "Sony's new headphones and speakers are all about skull-rattling bass - The Verge",
+      "description": "Sony’s new ULT Power Sound series includes three speakers and a new pair of headphones — all designed to kick out powerful low-end bass.",
+      "url": "https://www.theverge.com/2024/4/11/24127358/sony-ult-power-sound-headphones-speakers-price",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/pbyeFboDvptWylmQWMbQTT8yHxA=/0x0:2040x1360/1200x628/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/25386454/DSCF6628.jpg",
+      "publishedAt": "2024-04-11T16:00:00Z",
+      "content": "Sonys new headphones and speakers are all about skull-rattling bass\r\nSonys new headphones and speakers are all about skull-rattling bass\r\n / The new ULT Power Sound series has a button that gives you… [+3481 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Android Authority" },
+      "author": null,
+      "title": "Android 15 adds a new screensaver that makes it easier to control your smart home - Android Authority",
+      "description": "Android 15 is preparing to add a screensaver called “Home Controls” that lets you more easily control your Google Home devices.",
+      "url": "https://www.androidauthority.com/android-15-home-controls-screensaver-3433352/",
+      "urlToImage": "https://www.androidauthority.com/wp-content/uploads/2024/04/Android_15_home_controls_screen_saver_hero.jpg",
+      "publishedAt": "2024-04-11T15:09:17Z",
+      "content": "<ul><li>Android 15 is preparing to add a screensaver called Home Controls that lets you control your Google Home devices when your device is idle and charging.</li><li>Android already lets you contro… [+2520 chars]"
+    }
+  ]
+}
