@@ -11,7 +11,7 @@ export class News extends Component {
 
   async componentDidMount() {
     let endpoint =
-      "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=0a4ece348d504c7c9f16781fb19c222b";
+      "https://newsapi.org/v2/everything?q=tesla&from=2024-03-15&sortBy=publishedAt&apiKey=0a4ece348d504c7c9f16781fb19c222b";
     let result = await fetch(endpoint);
     let resultJson = await result.json();
     this.setState({ article: resultJson.articles });
