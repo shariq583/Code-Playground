@@ -3,22 +3,30 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: "Oswald", sans-serif;
+}
 nav {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   position: fixed;
+  width: 99vw;
+  height: 6rem;
 }
 #firstSec {
-  background-image: url(img/1st\ Page.png);
+  background-image: url(img/Upper\ first\ part.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 50vw;
   width: 100%;
 }
 #navLogo {
-  margin: 2vw;
+  margin: 0vw 2vw;
+}
+nav {
+  background-color: rgba(120, 113, 255, 0.084);
 }
 #option {
   float: right;
@@ -31,13 +39,27 @@ nav {
 }
 #option :hover {
   /* background-color: blue; */
-  color: blue;
+  color: rgb(2, 77, 2);
 }
-#secondSec {
+#navPara p {
+  display: inline;
 }
-#thirdSec {
-  background-image: url(img/3rd\ Page.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 43vw;
+#navPara {
+  display: inline-block;
+  height: 14vw;
+  padding: 35vw 60vw 0vw 16vw;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
+#contBtn {
+  border: none;
+  background-color: brown;
+  color: white;
+  padding: 0.6vw;
+  border-radius: 1vw;
+  margin: 0 45vw;
+  cursor: pointer;
+}
+#contBtn: ;
