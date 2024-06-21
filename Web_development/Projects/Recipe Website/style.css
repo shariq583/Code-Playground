@@ -9,31 +9,23 @@
 body {
   font-family: "Oswald", sans-serif;
 }
+/* Navbar */
 nav {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   position: fixed;
+  z-index: 5;
   width: 99vw;
   height: 6rem;
 }
-#firstSec {
-  background-image: url(img/Upper\ first\ part.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vw;
-  width: 100%;
-}
-#navLogo {
-  margin: 0vw 2vw;
-}
 nav {
-  background-color: rgba(120, 113, 255, 0.084);
+  background-color: rgba(98, 0, 255, 0.178);
 }
 #option {
   float: right;
-  margin: 3vw 0vw 0vw 55vw;
+  margin: 2.7vw 0vw 0vw 40vw;
 }
 #option a {
   text-decoration: none;
@@ -41,13 +33,20 @@ nav {
   padding: 1vw;
 }
 #option :hover {
-  /* background-color: blue; */
   color: rgb(2, 77, 2);
 }
-#navPara p {
+/* firstSection */
+#firstSec {
+  background-image: url(img/Upper\ first\ part.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vw;
+  width: 100%;
+}
+#firstSecPara p {
   display: inline;
 }
-#navPara {
+#firstSecPara {
   display: inline-block;
   height: 14vw;
   padding: 35vw 60vw 0vw 16vw;
@@ -71,23 +70,15 @@ nav {
 .contBtn:hover {
   background-color: red;
 }
+/* secondPara */
 #secondSec {
   background-image: url(img/Upper\ second.png);
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 1;
   width: 99vw;
-  height: 40vw;
+  height: 45vw;
 }
 #secondHeading {
-  /* font-family: "Playwrite PL", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: italic; */
-  /* font-family: "Kaushan Script", cursive;
-  font-weight: 900;
-  font-style: normal;
-  font-size: x-large; */
   font-family: "Grandstander", cursive;
   font-size: la;
   font-weight: 700;
@@ -95,4 +86,24 @@ nav {
   color: rgb(153, 90, 212);
   display: inline-block;
   margin: 15vw 0vw 0vw 54vw;
+}
+#secondPara {
+  width: 40vw;
+  margin: 0vw 0vw 0vw 54vw;
+}
+/* thirdSection */
+#thirdSec {
+  background-image: url(img/menu\ section.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vw;
+}
+#thirdSecPar {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.thirdSecText {
+  padding-top: 36vw;
+  color: white;
 }
