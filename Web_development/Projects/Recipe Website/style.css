@@ -21,7 +21,7 @@ nav {
   height: 6rem;
 }
 nav {
-  background-color: rgba(98, 0, 255, 0.178);
+  background-color: rgba(163, 230, 254, 0.33);
 }
 #option {
   float: right;
@@ -106,4 +106,14 @@ nav {
 .thirdSecText {
   padding-top: 36vw;
   color: white;
+}
+#testSection {
+  background-image: url(img/test\ sec.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 38vw;
+}
+#testSecQuote {
+  width: 20vw;
+  padding: 12vw 25vw;
 }
