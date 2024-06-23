@@ -125,7 +125,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 20vw;
+  height: 22.5vw;
 }
 #footerText a {
   color: rgb(0, 0, 0);
@@ -133,4 +133,16 @@ footer {
 }
 #footerText li {
   list-style: none;
+}
+#footerCopy {
+  display: inline;
+}
+#footerCopy p {
+  display: inline;
+}
+#footerBtmText p {
+  display: inline;
+}
+#footerBtmText {
+  display: inline;
 }
