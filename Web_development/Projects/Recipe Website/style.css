@@ -115,5 +115,22 @@ nav {
 }
 #testSecQuote {
   width: 20vw;
-  padding: 12vw 25vw;
+  padding: 11vw 25vw;
+}
+footer {
+  height: 25vw;
+  background-color: rgba(110, 44, 252, 0.454);
+}
+#footerText {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vw;
+}
+#footerText a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+#footerText li {
+  list-style: none;
 }
