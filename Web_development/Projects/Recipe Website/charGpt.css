@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +9,9 @@
 body {
   font-family: "Oswald", sans-serif;
 }
-
 /* Navbar */
 nav {
   font-family: "Oswald", sans-serif;
-  font-size: 1rem;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -22,23 +19,18 @@ nav {
   z-index: 5;
   width: 99vw;
   height: 6rem;
-  background-color: rgba(163, 230, 254, 0.33);
-  display: flex;
-  justify-content: space-between;
 }
-#navLogo {
-  display: inline;
+nav {
+  background-color: rgba(163, 230, 254, 0.33);
 }
 #option {
-  display: inline-flex;
-  justify-content: flex-end;
-  align-items: center;
-  justify-self: end;
+  float: right;
+  margin: 2.7vw 0vw 0vw 40vw;
 }
 #option a {
   text-decoration: none;
   color: black;
-  padding: 0vw 1vw;
+  padding: 1vw;
 }
 #option :hover {
   color: rgb(2, 77, 2);
@@ -50,7 +42,6 @@ nav {
   background-size: cover;
   height: 50vw;
   width: 100%;
-  font-size: 1rem;
 }
 #firstSecPara p {
   display: inline;
@@ -58,7 +49,7 @@ nav {
 #firstSecPara {
   display: inline-block;
   height: 14vw;
-  padding: 35% 60vw 0vw 16vw;
+  padding: 35vw 60vw 0vw 16vw;
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -79,7 +70,6 @@ nav {
 .contBtn:hover {
   background-color: red;
 }
-
 /* secondPara */
 #secondSec {
   background-image: url(img/Upper\ second.png);
@@ -125,7 +115,7 @@ nav {
 }
 #testSecQuote {
   width: 20vw;
-  padding: 10vw 25vw;
+  padding: 11vw 25vw;
 }
 footer {
   height: 25vw;
@@ -157,4 +147,140 @@ footer {
 #footerBtmText {
   display: inline;
   margin-left: 70vw;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  #firstSec {
+    height: 60vw;
+  }
+  #secondSec {
+    height: 55vw;
+  }
+  #thirdSec {
+    height: 60vw;
+  }
+  #testSection {
+    height: 45vw;
+  }
+}
+
+@media (max-width: 992px) {
+  #option {
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
+  #firstSecPara {
+    padding: 20vw 10vw 0vw 10vw;
+  }
+  #secondHeading {
+    margin: 10vw 0vw 0vw 30vw;
+  }
+  #secondPara {
+    width: 60vw;
+    margin: 0vw 0vw 0vw 20vw;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 4rem;
+  }
+  #option a {
+    padding: 0.5vw;
+  }
+  #firstSec {
+    height: 70vw;
+  }
+  #firstSecPara {
+    padding: 20vw 5vw 0vw 5vw;
+  }
+  .contBtn {
+    padding: 0.8vw;
+    margin: 0 calc(35vw);
+  }
+  #secondSec {
+    height: 65vw;
+  }
+  #secondHeading {
+    margin: 10vw 0vw 0vw 20vw;
+  }
+  #secondPara {
+    width: 70vw;
+    margin: 0vw 0vw 0vw 15vw;
+  }
+  #thirdSec {
+    height: 70vw;
+  }
+  .thirdSecText {
+    padding-top: 50vw;
+  }
+  #testSection {
+    height: 55vw;
+  }
+  #testSecQuote {
+    width: 80vw;
+    padding: 10vw 10vw;
+  }
+  footer {
+    height: 30vw;
+  }
+  #footerText {
+    flex-direction: column;
+    height: auto;
+    padding: 5vw 0;
+  }
+  #footerBtmText {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #firstSec {
+    height: 80vw;
+  }
+  #firstSecPara {
+    padding: 25vw 5vw 0vw 5vw;
+  }
+  .contBtn {
+    padding: 1vw;
+    margin: 0 calc(30vw);
+  }
+  #secondSec {
+    height: 75vw;
+  }
+  #secondHeading {
+    margin: 10vw 0vw 0vw 15vw;
+  }
+  #secondPara {
+    width: 80vw;
+    margin: 0vw 0vw 0vw 10vw;
+  }
+  #thirdSec {
+    height: 80vw;
+  }
+  .thirdSecText {
+    padding-top: 60vw;
+  }
+  #testSection {
+    height: 65vw;
+  }
+  #testSecQuote {
+    width: 90vw;
+    padding: 15vw 5vw;
+  }
+  footer {
+    height: auto;
+  }
+  #footerText {
+    flex-direction: column;
+    height: auto;
+    padding: 5vw 0;
+  }
+  #footerBtmText {
+    margin-left: 0;
+    text-align: center;
+  }
 }
