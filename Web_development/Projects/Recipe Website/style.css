@@ -116,6 +116,7 @@ nav {
 .thirdSecText {
   padding-top: 36vw;
   color: white;
+  font-size: 1rem;
 }
 #testSection {
   background-image: url(img/test\ sec.png);
@@ -125,7 +126,8 @@ nav {
 }
 #testSecQuote {
   width: 20vw;
-  padding: 10vw 25vw;
+  padding: 5vw 25vw;
+  font-size: 1rem;
 }
 footer {
   height: 25vw;
@@ -144,6 +146,11 @@ footer {
 #footerText li {
   list-style: none;
 }
+#footerBottom {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(94, 96, 183);
+}
 #footerCopy {
   display: inline;
 }
@@ -156,5 +163,4 @@ footer {
 }
 #footerBtmText {
   display: inline;
-  margin-left: 70vw;
 }
