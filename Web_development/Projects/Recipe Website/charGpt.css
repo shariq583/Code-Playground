@@ -120,6 +120,7 @@ nav {
 footer {
   height: 25vw;
   background-color: rgba(94, 96, 183, 0.846);
+  display: flex;
 }
 #footerText {
   display: flex;
