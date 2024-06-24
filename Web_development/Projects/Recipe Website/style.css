@@ -164,3 +164,6 @@ footer {
 #footerBtmText {
   display: inline;
 }
+/* Responsive */
+@media (max-width: 70px) {
+}
