@@ -130,14 +130,14 @@ nav {
   font-size: 1rem;
 }
 footer {
-  height: 24vw;
+  height: 15vw;
   background-color: rgba(94, 96, 183, 0.846);
 }
 #footerText {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 22.5vw;
+  height: 15vw;
 }
 #footerText a {
   color: rgb(0, 0, 0);
@@ -165,5 +165,8 @@ footer {
   display: inline;
 }
 /* Responsive */
-@media (max-width: 70px) {
+@media (max-width: 595px) {
+  body {
+    background: red;
+  }
 }
