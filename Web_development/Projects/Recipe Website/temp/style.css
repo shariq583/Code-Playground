@@ -46,8 +46,14 @@
   }
   #halfContainer {
     height: 100vh;
-    width: -50vw;
+    width: 0vw;
     display: flex;
     justify-content: flex-end;
+  }
+  .halfContainerTransition {
+    width: -50vw;
+    background-color: blue;
+    color: white;
+    transition: all 0.3s ease;
   }
 }
