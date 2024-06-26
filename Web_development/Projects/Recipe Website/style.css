@@ -165,8 +165,58 @@ footer {
   display: inline;
 }
 /* Responsive */
-@media (max-width: 595px) {
-  body {
-    background: red;
+* {
+  margin: 0;
+  padding: 0;
+}
+#hamSection {
+  display: none;
+}
+.Hide {
+  display: none;
+}
+.Show {
+  display: block;
+}
+
+@media (max-width: 361px) {
+  #option {
+    display: none;
+  }
+  #linkContainer {
+    display: none;
+  }
+  #hamSection {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .hamLinkContainer {
+    display: inline-block;
+    margin: 2vw;
+  }
+  .hamLinkContainer li {
+    list-style: none;
+  }
+  .hamLinkContainer a {
+    text-decoration: none;
+    color: black;
+  }
+  .halfContainer {
+    transition: all 0.3s ease;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .halfContainerTransition {
+    width: 50vw;
+    height: 100vh;
+    float: right;
+    background-color: blue;
+    transition: all 0.3s ease;
+  }
+  .halfContainerTransition a {
+    color: white;
   }
 }

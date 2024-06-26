@@ -21,9 +21,7 @@
 .Show {
   display: block;
 }
-#hamLinkContainer {
-  display: none;
-}
+
 @media (max-width: 361px) {
   #linkContainer {
     display: none;
@@ -33,27 +31,32 @@
     align-items: flex-end;
     flex-direction: column;
   }
-  #hamLinkContainer {
+  .hamLinkContainer {
     display: inline-block;
     margin: 2vw;
   }
-  #hamLinkContainer li {
+  .hamLinkContainer li {
     list-style: none;
   }
-  #hamLinkContainer a {
+  .hamLinkContainer a {
     text-decoration: none;
     color: black;
   }
-  #halfContainer {
+  .halfContainer {
+    transition: all 0.3s ease;
     height: 100vh;
-    width: 0vw;
+    width: 100vw;
     display: flex;
     justify-content: flex-end;
   }
   .halfContainerTransition {
-    width: -50vw;
+    width: 50vw;
+    height: 100vh;
+    float: right;
     background-color: blue;
-    color: white;
     transition: all 0.3s ease;
+  }
+  .halfContainerTransition a {
+    color: white;
   }
 }
