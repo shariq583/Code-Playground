@@ -31,9 +31,9 @@ nav {
 }
 #option {
   display: inline-flex;
-  justify-content: flex-end;
   align-items: center;
-  justify-self: end;
+  justify-content: flex-end;
+  justify-self: right;
 }
 #option a {
   text-decoration: none;
