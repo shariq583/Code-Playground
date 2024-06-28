@@ -33,8 +33,6 @@ nav {
   display: inline-flex;
   align-items: center;
   justify-content: flex-end;
-  justify-self: right;
-  margin-right: -50vw;
 }
 #option a {
   text-decoration: none;
@@ -43,6 +41,9 @@ nav {
 }
 #option :hover {
   color: rgb(2, 77, 2);
+}
+.halfContainer {
+  display: none;
 }
 /* firstSection */
 #firstSec {
