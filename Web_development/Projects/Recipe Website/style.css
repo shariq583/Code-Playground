@@ -225,5 +225,12 @@ footer {
     color: white;
   }
   #firstSec {
+    height: 45vh;
+  }
+  #firstSecPara {
+    padding: 55% 30vw 0vw 29vw;
+  }
+  #secondSec {
+    height: 75vw;
   }
 }
