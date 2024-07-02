@@ -33,7 +33,6 @@ nav {
   display: inline-flex;
   align-items: center;
   justify-content: flex-end;
-  justify-self: right;
 }
 #option a {
   text-decoration: none;
@@ -42,6 +41,9 @@ nav {
 }
 #option :hover {
   color: rgb(2, 77, 2);
+}
+.halfContainer {
+  display: none;
 }
 /* firstSection */
 #firstSec {
@@ -221,5 +223,14 @@ footer {
   }
   .halfContainerTransition a {
     color: white;
+  }
+  #firstSec {
+    height: 45vh;
+  }
+  #firstSecPara {
+    padding: 55% 30vw 0vw 29vw;
+  }
+  #secondSec {
+    height: 75vw;
   }
 }
