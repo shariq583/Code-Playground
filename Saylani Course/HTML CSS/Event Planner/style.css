@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#navMaster {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  position: fixed;
+  background-color: white;
+  height: 15%;
+  z-index: 2;
+}
+#navBar {
+  text-align: center;
+  box-shadow: 0px 8px 1px black;
+}
+#downSec {
+  display: flex;
+  justify-content: center;
+}
+#downSec a {
+  padding: 0vw 2vw;
+  text-decoration: none;
+  color: black;
+}
+#imgSec {
+  object-fit: contain;
+}
+#imgSec img {
+  width: 100vw;
+  margin-top: 15vh;
+}
+.text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text h1 {
+  font-size: 3.1rem;
+  padding: 5vh 0;
+}
+.text p {
+  padding: 0vh 0 10vh 0;
+}
+#flagContainer {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 5vh;
+}
+.cardCollection {
+  margin: 60px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  border: 1px solid gray;
+  background-color: white;
+  height: 22vw;
+  width: 22vw;
+  border-radius: 5px;
+  margin: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition-duration: 1s;
+}
+.card img {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+}
+.card:hover {
+  box-shadow: 1px 1px 8px 2px rgb(0, 0, 0);
+}
+#cardCollectionPink {
+  background-color: #fff2f3;
+}
+footer {
+  padding-top: 2vh;
+  text-align: center;
+  background-color: rgb(56, 41, 41);
+  color: white;
+  height: 5vh;
+}
